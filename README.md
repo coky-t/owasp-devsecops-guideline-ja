@@ -20,7 +20,7 @@ This is the unofficial Japanese translation of the [OWASP DevSecOps Guideline](h
 * [02. 脆弱性スキャン](document/document/02-Vulnerability-Scanning.md)
 * [02a. 静的スキャンはプロセスの重要な部分](document/document/02a-Static-Application-Security-Testing.md)
 * [02b. 動的アプリケーションセキュリティテスト (DAST)](document/document/02b-Dynamic-Application-Security-Testing.md)
-＊[02c. インタラクティブアプリケーションセキュリティテスト](document/document/02c-Interactive-Application-Security-Testing.md)
+* [02c. インタラクティブアプリケーションセキュリティテスト](document/document/02c-Interactive-Application-Security-Testing.md)
 * [02d. ソフトウェアコンポーネント/コンポジション解析 (SCA)](document/document/02d-Software-Composition-Analysis.md)
 * [02e. インフラストラクチャ脆弱性スキャン](document/document/02e-Infrastructure-Vulnerability-Scanning.md)
 * [02f. コンテナ脆弱性スキャン](document/document/02f-Container-Vulnerability-Scanning.md)
