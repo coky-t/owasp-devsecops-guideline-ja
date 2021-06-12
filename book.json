@@ -1,0 +1,9 @@
+{
+  "root" : "./document/document",
+  "plugins" : [ "anchors" ],
+
+  "structure": {
+    "readme": "00a-introduction.md"
+  }
+
+}
