@@ -26,3 +26,7 @@ This is the unofficial Japanese translation of the [OWASP DevSecOps Guideline](h
 * [02f. コンテナ脆弱性スキャン](document/document/02f-Container-Vulnerability-Scanning.md)
 * [02g. プライバシー](document/document/02g-Privacy.md)
 * [03. コンプライアンス監査](document/document/03-Compliance-Auditing.md)
+
+## Author (日本語訳)
+
+[Koki Takeyama](https://github.com/coky-t)
