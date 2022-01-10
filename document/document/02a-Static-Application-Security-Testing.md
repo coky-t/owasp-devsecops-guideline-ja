@@ -21,13 +21,14 @@
 ### ツール
 - #### 静的コード解析:
   + [SonarQube](https://www.sonarqube.org) - オープンソースのウェブベースのツールで 20 以上の言語に対応しており、多くのプラグインもあります
-  + [Veracode](https://www.veracode.com/security/static-analysis-tool) - SaaS モデル上に構築された静的解析ツール。このツールは主にセキュリティの観点からコードを解析するために使用されます
+  + [Veracode](https://www.veracode.com/security/static-analysis-tool) - SaaS モデル上に構築された静的解析ツールです。このツールは主にセキュリティの観点からコードを解析するために使用されます
   + [security code scan](https://github.com/security-code-scan/security-code-scan) - C＃ と VB.NET 向けの脆弱性パターン検出器です
   + [Brakeman](https://github.com/presidentbeef/brakeman) - Ruby on Rails アプリケーション向けの静的解析セキュリティ脆弱性スキャナです
   + [Enlightn](https://github.com/enlightn/enlightn) - Laravel PHP アプリケーション向けの静的解析脆弱性スキャナです
   + [Inquisition](https://github.com/rubygarage/inquisition) - Ruby および Ruby on Rails で構築されたウェブアプリケーションのテクニカル分析に便利なツールセットです。これですべての単体 gem をセットアップして構成する必要がなくなります。代わりに Inquisition gem を使用します。
   + [CodeSweep](https://hclsw.co/codesweepgithub) - GitHub 向けの静的解析ツールです。フリーに使えてプルリクエストでコードをスキャンできます。 20 以上の言語と IaC (docker, k8s) をサポートしています。 VS Code 版は [こちら]( https://hclsw.co/codesweep) にあります
   + [HCL AppScan on Cloud](https://cloud.appscan.com ) - サービスとして構築された SAST ツールです。このツールは従来の SAST, SCA, IaC スキャンを実行できます。
+  + [Semgrep](https://semgrep.dev) - 多くの言語に対応した軽量な静的解析です。ソースコードのようなパターンでバグと思われるものを見つけます。
 
 - #### IaC スキャン: 
   + [Checkov](https://github.com/bridgecrewio/checkov) - Bridgecrew の Checkov で Terraform, Cloudformation, Kubernetes, Serverless フレームワーク、およびその他の infrastructure-as-code-languages のビルド時のクラウド設定ミスを防止します
