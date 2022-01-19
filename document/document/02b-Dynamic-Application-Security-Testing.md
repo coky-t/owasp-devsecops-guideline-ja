@@ -22,6 +22,7 @@ DAST ツールはアプリケーションをビルドするソースコードや
   + [Veracode Dynamic Analysis](https://www.veracode.com/products/dynamic-analysis-dast) - Veracode Dynamic Analysis は悪用可能な脆弱性に関して企業が大規模にウェブアプリケーションをスキャンするのに役立ちます
   + [Burp Suite](http://www.portswigger.net/) はウェブアプリケーションのセキュリティテストを実行するための統合プラットフォームです。さまざまなツールがシームレスに連携して、アプリケーションの攻撃対象領域の初期マッピングと分析から、セキュリティ脆弱性の発見とエクスプロイトに至るまで、テストプロセス全体をサポートします。
   + [HCL AppScan on Cloud](https://cloud.appscan.com) - サービスとして構築された DAST ツールです。パブリックアプリケーションとプライベートでホストされているアプリケーションの両方をスキャンできます。最新のウェブアプリケーションを調査およびテストし、手動で記録された手順を活用して複雑なログインシナリオを処理できます。
+  + [Nuclei](https://github.com/projectdiscovery/nuclei) - シンプルな YAML ベースの DSL に基づく高速でカスタマイズ可能な脆弱性スキャナです。
 
 ---
 ### 参考情報
