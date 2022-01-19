@@ -29,6 +29,8 @@
   + [CodeSweep](https://hclsw.co/codesweepgithub) - GitHub 向けの静的解析ツールです。フリーに使えてプルリクエストでコードをスキャンできます。 20 以上の言語と IaC (docker, k8s) をサポートしています。 VS Code 版は [こちら]( https://hclsw.co/codesweep) にあります
   + [HCL AppScan on Cloud](https://cloud.appscan.com ) - サービスとして構築された SAST ツールです。このツールは従来の SAST, SCA, IaC スキャンを実行できます。
   + [Semgrep](https://semgrep.dev) - 多くの言語に対応した軽量な静的解析です。ソースコードのようなパターンでバグと思われるものを見つけます。
+  + [Checkmarx SAST](https://checkmarx.com) - 静的解析セキュリティ脆弱性スキャナです
+  + [Fortify](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer)- 静的解析セキュリティ脆弱性スキャナです
 
 - #### IaC スキャン: 
   + [Checkov](https://github.com/bridgecrewio/checkov) - Bridgecrew の Checkov で Terraform, Cloudformation, Kubernetes, Serverless フレームワーク、およびその他の infrastructure-as-code-languages のビルド時のクラウド設定ミスを防止します
