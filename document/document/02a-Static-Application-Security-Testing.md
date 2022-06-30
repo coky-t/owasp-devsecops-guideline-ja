@@ -11,7 +11,7 @@
 
 静的コード解析の詳細については [OWASP ページ](https://owasp.org/www-community/controls/Static_Code_Analysis) をご覧ください。
 より良い結果を得るために、静的セキュリティスキャンとサードパーティコード (オープンソースライブラリ(依存関係)) スキャンを組み合わせることができます。
-この部分をより適切でより完全にする (設定ミスを防止する) ために、ここでは IaC (Infrastructure as code) セキュリティスキャンを導入することもできます。たとえば Terraform, helm, Ansible のコードなどをチェックします。
+この部分をより適切でより完全にする (設定ミスを防止する) ために、 IaC (Infrastructure as code) セキュリティスキャンを導入することもできます。たとえば Terraform, helm, Ansible のコードなどをチェックします。
 したがって上記の行によると、このステップで可能なアクションは以下のようになります。
 + 静的コード解析 (通称 SAST)
 + オープンソースライブラリ (サードパーティ / 依存関係) スキャン (通称 SCA)
@@ -19,11 +19,14 @@
 
 ---
 ### ツール
-- #### 静的コード解析:
+- #### フリーの静的アプリケーションセキュリティテストツール:
+  + [CodeSec by Contrast Security](https://www.contrastsecurity.com/developer) - 開発者および CI/CD パイプラインで使用するために設計された高速で高品質なフリーの SAST ツールです。
   + [SonarQube](https://www.sonarqube.org) - オープンソースのウェブベースのツールで 20 以上の言語に対応しており、多くのプラグインもあります
+  + [Brakeman](https://github.com/presidentbeef/brakeman) - Ruby on Rails アプリケーション向けの静的解析セキュリティ脆弱性スキャナです
+
+- #### 商用の静的アプリケーションセキュリティテストツール:
   + [Veracode](https://www.veracode.com/security/static-analysis-tool) - SaaS モデル上に構築された静的解析ツールです。このツールは主にセキュリティの観点からコードを解析するために使用されます
   + [security code scan](https://github.com/security-code-scan/security-code-scan) - C＃ と VB.NET 向けの脆弱性パターン検出器です
-  + [Brakeman](https://github.com/presidentbeef/brakeman) - Ruby on Rails アプリケーション向けの静的解析セキュリティ脆弱性スキャナです
   + [Enlightn](https://github.com/enlightn/enlightn) - Laravel PHP アプリケーション向けの静的解析脆弱性スキャナです
   + [Inquisition](https://github.com/rubygarage/inquisition) - Ruby および Ruby on Rails で構築されたウェブアプリケーションのテクニカル分析に便利なツールセットです。これですべての単体 gem をセットアップして構成する必要がなくなります。代わりに Inquisition gem を使用します。
   + [CodeSweep](https://hclsw.co/codesweepgithub) - GitHub 向けの静的解析ツールです。フリーに使えてプルリクエストでコードをスキャンできます。 20 以上の言語と IaC (docker, k8s) をサポートしています。 VS Code 版は [こちら]( https://hclsw.co/codesweep) にあります
@@ -32,7 +35,7 @@
   + [Checkmarx SAST](https://checkmarx.com) - 静的解析セキュリティ脆弱性スキャナです
   + [Fortify](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer)- 静的解析セキュリティ脆弱性スキャナです
 
-- #### IaC スキャン: 
+- #### Infrastructure as Code スキャンツール: 
   + [Checkov](https://github.com/bridgecrewio/checkov) - Bridgecrew の Checkov で Terraform, Cloudformation, Kubernetes, Serverless フレームワーク、およびその他の infrastructure-as-code-languages のビルド時のクラウド設定ミスを防止します
   + [ansible-lint](https://github.com/ansible-community/ansible-lint) - Ansible のベストプラクティスチェッカです
   + [puppet-lint](https://github.com/rodjek/puppet-lint) - Puppet マニフェストがスタイルガイドに準拠していることをチェックします
