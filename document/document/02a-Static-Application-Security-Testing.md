@@ -23,6 +23,7 @@
   + [CodeSec by Contrast Security](https://www.contrastsecurity.com/developer) - 開発者および CI/CD パイプラインで使用するために設計された高速で高品質なフリーの SAST ツールです。
   + [SonarQube](https://www.sonarqube.org) - オープンソースのウェブベースのツールで 20 以上の言語に対応しており、多くのプラグインもあります
   + [Brakeman](https://github.com/presidentbeef/brakeman) - Ruby on Rails アプリケーション向けの静的解析セキュリティ脆弱性スキャナです
+  + [CodeQL](https://github.com/github/codeql) - 業界をリードするセマンティックコード解析エンジン CodeQL により、コードベース全体の脆弱性を発見します。
 
 - #### 商用の静的アプリケーションセキュリティテストツール:
   + [Veracode](https://www.veracode.com/security/static-analysis-tool) - SaaS モデル上に構築された静的解析ツールです。このツールは主にセキュリティの観点からコードを解析するために使用されます
