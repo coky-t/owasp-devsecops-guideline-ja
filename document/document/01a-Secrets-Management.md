@@ -44,3 +44,4 @@
 + [Repo-supervisor](https://github.com/auth0/repo-supervisor) - コードのセキュリティ設定ミスをスキャンし、パスワードとシークレットを検索します
 + [truffleHog](https://github.com/dxa4481/truffleHog) - git リポジトリから高エントロピー文字列とシークレットを検索し、コミット履歴を深く掘り下げます
 + [Git Hound](https://github.com/ezekg/git-hound) - 機密データのコミットを防止する git プラグインです
++ [Github Secret Scanning](https://docs.github.com/en/code-security/secret-scanning) - GitHub に組み込まれたシークレット検出用の機能です。
