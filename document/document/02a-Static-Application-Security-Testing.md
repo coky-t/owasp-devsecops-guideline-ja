@@ -43,3 +43,5 @@
   + [tfsec](https://github.com/tfsec/tfsec) - Terraform コード向けのセキュリティスキャナです
   + [terrascan](https://github.com/accurics/terrascan) - クラウドネイティブインフラストラクチャをプロビジョニングする前に Infrastructure as Code 全体でコンプライアンスやセキュリティ違反を検出してリスクを軽減します
   + [tflint](https://github.com/terraform-linters/tflint) - プラグ可能な Terraform リンターです
+  + [Trivy](https://github.com/aquasecurity/trivy) - Docker, Kubernetes, Terraform, CloudFormation の設定上の問題を検出するビルトインポリシーを提供します。また、Conftest のように JSON, YAML などをスキャンする独自のポリシーを Rego に記述することもできます。
+  + [KICS](https://github.com/Checkmarx/kics) - Checkmarx の KICS を用いて Infrastructure-as-Code の開発サイクルの早い段階でセキュリティ脆弱性、コンプライアンス問題、インフラストラクチャ設定ミスを発見します。
