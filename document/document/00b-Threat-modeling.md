@@ -16,7 +16,7 @@ DevSecOps の取り組みで重要なのは脅威モデリングです。脅威�
 
 #### 用語:
 + 弱点 (Weakness)
-  - A software defect or bug. (Ex: missing user email validation)
+  - ソフトウェアの不具合やバグ (例: ユーザーの電子メールバリデーションの欠落)
 + 脆弱性 (Vulnerability)
   - 悪用可能な弱点 (例: ユーザー電子メールフィールドを悪用して SQL ステートメントを挿入できる)
 + 攻撃 (Attack)
