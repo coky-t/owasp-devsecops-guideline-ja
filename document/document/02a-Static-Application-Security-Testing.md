@@ -35,6 +35,7 @@
   + [Semgrep](https://semgrep.dev) - 多くの言語に対応した軽量な静的解析です。ソースコードのようなパターンでバグと思われるものを見つけます。
   + [Checkmarx SAST](https://checkmarx.com) - 静的解析セキュリティ脆弱性スキャナです
   + [Fortify](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer)- 静的解析セキュリティ脆弱性スキャナです
+  + [PT Application Inspector](https://www.ptsecurity.com/ww-en/products/ai/) - 高品質な解析と脆弱性を自動的に確認する便利なツールを提供する唯一のソースコードアナライザです - レポートにより作業を大幅にスピードアップし、セキュリティ専門家と開発者との間のチームワークを簡素化します
 
 - #### Infrastructure as Code スキャンツール: 
   + [Checkov](https://github.com/bridgecrewio/checkov) - Bridgecrew の Checkov で Terraform, Cloudformation, Kubernetes, Serverless フレームワーク、およびその他の infrastructure-as-code-languages のビルド時のクラウド設定ミスを防止します
