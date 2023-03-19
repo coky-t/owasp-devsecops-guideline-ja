@@ -15,7 +15,7 @@ This is the unofficial Japanese translation of the [OWASP DevSecOps Guideline](h
 * [00a. DevSecOps 入門](document/document/00a-Overview.md)
 * [00b. 脅威モデリング](document/document/00b-Threat-modeling.md)
 * [01. コミット前に](document/document/01-Pre-commit.md)
-* [01a. リポジトリのシークレットとクレデンシャルに注意](document/document/01a-Secrets-Management.md)
+* [01a. シークレットとクレデンシャルに注意](document/document/01a-Secrets-Management.md)
 * [01b. コードのリンティング](document/document/01b-Linting-Code.md)
 * [02. 脆弱性スキャン](document/document/02-Vulnerability-Scanning.md)
 * [02a. 静的スキャンはプロセスの重要な部分](document/document/02a-Static-Application-Security-Testing.md)
@@ -25,6 +25,7 @@ This is the unofficial Japanese translation of the [OWASP DevSecOps Guideline](h
 * [02e. インフラストラクチャ脆弱性スキャン](document/document/02e-Infrastructure-Vulnerability-Scanning.md)
 * [02f. コンテナ脆弱性スキャン](document/document/02f-Container-Vulnerability-Scanning.md)
 * [02g. プライバシー](document/document/02g-Privacy.md)
+* [02h. 脆弱性の一元管理](document/document/02h-Vulnerability-Management.md)
 * [03. コンプライアンス監査](document/document/03-Compliance-Auditing.md)
 
 ## Author (日本語訳)
