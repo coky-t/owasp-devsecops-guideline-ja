@@ -1,0 +1,62 @@
+# OWASP DevSecOps ガイドライン
+
+これはこのドキュメントの新しい構成であり、可能な限り改善している途上のものです。
+旧版が必要な場合は [document-old-structure](../document-old-structure/) ディレクトリを参照してください。
+
+この新しい構成の図版が必要な場合は [Project restructure](./assets/docs/Project-restructure-darft.pdf) を参照してください。
+
+
+
+## 目次:
+
+- [0-概論 (Intro)](./0-Intro)
+  - [0-1-序文 (Intro)](./0-Intro/0-1-Intro.md)
+  - [0-2-概要 (Overview)](./0-Intro/0-2-Overview.md)
+- [1-導入 (Init)](./1-Init)
+  - [1-1-チーム形成 (Shape-the-team)](./1-Init/1-1-Shape-the-team)
+    - [1-1-1-セキュリティ担当者 (Security-champions)](./1-Init/1-1-Shape-the-team/1-1-1-Security-champions.md)
+  - [1-2-トレーニング (Training)](./1-Init/1-2-Training)
+    - [1-2-1-セキュアコーディング (Secure-coding)](./1-Init/1-2-Training/1-2-1-Secure-coding.md)
+    - [1-2-2-セキュリティ CI/CD (Security-CICD)](./1-Init/1-2-Training/1-2-1-Security-CICD.md)
+- [2-コミット前 (Pre-commit)](./2-Pre-commit)
+  - [2-1-プレコミット (Pre-commit)](./2-Pre-commit/2-1-Pre-commit.md)
+  - [2-2-脅威モデリング (Threat-modeling)](./2-Pre-commit/2-2-Threat-modeling.md)
+  - [2-3-リポジトリ堅牢化 (Repository-hardening)](./2-Pre-commit/2-3-Repository-hardening.md)
+  - [2-4-シークレット管理 (Secrets-Management)](./2-Pre-commit/2-4-Secrets-Management.md)
+  - [2-5-コードのリンティング (Linting-code)](./2-Pre-commit/2-5-Linting-code.md)
+- [3-コミット CI (Commit-CI)](./3-Commit-CI)
+  - [3-2-インタラクティブアプリケーションセキュリティテスト (Interactive-Application-Security-Testing)](./3-Commit-CI/3-2-Interactive-Application-Security-Testing.md)
+  - [3-1-静的解析 (Static-analysis)](./3-Commit-CI/3-1-Static-analysis)
+    - [3-1-1-静的アプリケーションセキュリティテスト (Static-Application-Security-Testing)](./3-Commit-CI/3-1-Static-analysis/3-1-1-Static-Application-Security-Testing.md)
+    - [3-1-2-ソフトウェアコンポジション解析 (Software-Composition-Analysis)](./3-Commit-CI/3-1-Static-analysis/3-1-2-Software-Composition-Analysis.md)
+    - [3-1-3-コンテナセキュリティ (Container-Security)](./3-Commit-CI/3-1-Static-analysis/3-1-3-Container-Security)
+      - [3-1-3-1-コンテナスキャン (Container-scanning)](./3-Commit-CI/3-1-Static-analysis/3-1-3-Container-Security/3-1-3-1-Container-scanning.md)
+      - [3-1-3-2-コンテナ堅牢化 (Container-hardening)](./3-Commit-CI/3-1-Static-analysis/3-1-3-Container-Security/3-1-3-2-Container-hardening.md)
+    - [3-1-4-Infastructure as Code (Infastructure-as-code)](./3-Commit-CI/3-1-Static-analysis/3-1-4-Infastructure-as-code.md)
+- [4-継続的デリバリ (Continuous-delivery-CD)](./4-Continuous-delivery-CD)
+  - [4-1-動的アプリケーションセキュリティテスト (Dynamic-Application-Security-Testing)](./4-Continuous-delivery-CD/4-1-Dynamic-Application-Security-Testing.md)
+  - [4-2-モバイルアプリケーションセキュリティテスト (Mobile-Application-Security-Test)](./4-Continuous-delivery-CD/4-2-Mobile-Application-Security-Test.md)
+  - [4-3-API セキュリティ (API-Security)](./4-Continuous-delivery-CD/4-3-API-Security.md)
+  - [4-4-設定ミスのチェック (Miss-Configuration-Check)](./4-Continuous-delivery-CD/4-4-Miss-Configuration-Check.md)
+- [5-デプロイ CD 稼働開始 (Deploy-CD-Golive)](./5-Deploy-CD-Golive)
+  - [5-1-鍵と証明書の管理 (Key-and-certificate-management)](./5-Deploy-CD-Golive/5-1-Key-and-certificate-management.md)
+  - [5-2-クラウドネイティブアプリケーション保護プラットフォーム (Cloud-Native-Application-Protection-Platform)](./5-Deploy-CD-Golive/5-2-Cloud-Native-Application-Protection-Platform.md)
+- [6-運用 (Operation)](./6-Operation)
+  - [6-1-稼働時テスト|継続的テスト (Runtime|Continuous-test)](./6-Operation/6-1-Runtime|Continuous-test)
+    - [6-1-1-インフラスキャン (Infra-scanning)](./6-Operation/6-1-Runtime|Continuous-test/6-1-1-Infra-scanning)
+      - [6-1-1-1-クラウドリソース (Could-resources)](./6-Operation/6-1-Runtime|Continuous-test/6-1-1-Infra-scanning/6-1-1-1-Could-resources.md)
+      - [6-1-1-2-K8S リソース (K8S-resources)](./6-Operation/6-1-Runtime|Continuous-test/6-1-1-Infra-scanning/6-1-1-2-K8S-resources.md)
+    - [6-1-2-イメージスキャン (Image-scanning)](./6-Operation/6-1-Runtime|Continuous-test/6-1-2-Image-scanning.md)  
+  - [6-2-侵害と攻撃のシミュレーション (Breach-and-attack-simulation)](./6-Operation/6-2-Breach-and-attack-simulation.md)
+  - [6-3-ログ記録と監視 (Logging-and-Monitoring)](./6-Operation/6-3-Logging-and-Monitoring.md)
+  - [6-4-ペンテスト (Pentest)](./6-Operation/6-4-Pentest.md)
+  - [6-5-脆弱性開示ポリシーとバグバウンティ (VDP|Bug-bounty)](./6-Operation/6-5-VDP|Bug-bounty.md)
+- [7-ガバナンス (Governance](./7-Governance)
+  - [7-1-コンプライアンス監査 (Compliance-Auditing)](./7-Governance/7-1-Compliance-Auditing)
+    - [7-1-1-コンプライアンス監査 (Compliance-Auditing)](./7-Governance/7-1-Compliance-Auditing/7-1-1-Compliance-Auditing.md)
+    - [7-1-2-Policy as Code (Policy-as-code)](./7-Governance/7-1-Compliance-Auditing/7-1-2-Policy-as-code.md)
+    - [7-1-3-セキュリティベンチマーク (Security-benchmarking)](./7-Governance/7-1-Compliance-Auditing/7-1-3-Security-benchmarking.md)
+  - [7-2-データ保護 (Data-protection)](./7-Governance/7-2-Data-protection.md)
+  - [7-3-レポーティング (Reporting)](./7-Governance/7-3-Reporting)
+    - [7-3-1-成熟度追跡 (Tracking-maturities)](./7-Governance/7-3-Reporting/7-3-1-Tracking-maturities.md)
+    - [7-3-2-脆弱性一元管理ダッシュボード (Central-vulnerability-management-dashboard)](./7-Governance/7-3-Reporting/7-3-2-Central-vulnerability-management-dashboard.md)
