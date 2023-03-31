@@ -48,3 +48,11 @@
   + [truffleHog](https://github.com/dxa4481/truffleHog) - git リポジトリから高エントロピー文字列とシークレットを検索し、コミット履歴を深く掘り下げます
   + [Git Hound](https://github.com/ezekg/git-hound) - 機密データのコミットを防止する git プラグインです
   + [Github Secret Scanning](https://docs.github.com/en/code-security/secret-scanning) - GitHub に組み込まれたシークレット検出用の機能です。
+
+- **プロプライエタリソフトウェア**:
+  + [GitGuardian](https://gitguardian.com) - ソースコードからシークレットを締め出します
+  + [Spectralops](https://spectralops.io) - 開発者ファーストのクラウドセキュリティです
+  + [TruffleSecurity](https://trufflesecurity.com) - シークレットを解き明かします
+  + [GitHub Advanced Security](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning) - GitHub はリポジトリをスキャンして既知の種類のシークレットを検出し、誤ってコミットされたシークレットの不正使用を防ぎます
+  + [BluBracket](https://blubracket.com) - コード内のシークレットとクレデンシャルを防ぎます
+  + [Nightfall](https://nightfall.ai) - クラウド上のシークレットと鍵を見つけて保護します
