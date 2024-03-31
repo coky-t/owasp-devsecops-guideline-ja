@@ -17,6 +17,8 @@ TBD
 - #### オープンソース:
   + [OWASP Dependency-Track](https://owasp.org/www-project-dependency-track/) -   Dependency-Track は組織がソフトウェアサプライチェーンのリスクを特定して低減できるようにするインテリジェントなコンポーネント解析プラットフォームです。これはソフトウェア部品表 (Software Bill of Materials, SBOM) の機能を活用するというユニークで非常に有益なアプローチをとっています。
   + [OWASP Dependency-check](https://owasp.org/www-project-dependency-check) - プロジェクトの依存関係に含まれる一般に公開されている脆弱性の検出を試みるソフトウェアコンポジション解析 (SCA) ツールで、 Java, .NET, JavaScript, Ruby をサポートしています
+  + [OWASP CycloneDX](https://cyclonedx.org/) - 多くの [互換ジェネレータ](https://cyclonedx.org/tool-center/) と SPDX ライセンス ID および表現をサポートする SBOM 標準フォーマットです。
+  + [OWASP dep-scan](https://owasp.org/www-project-dep-scan/) - 複数の言語とコンテナのリポジトリに対する既知の脆弱性に基づく監査ツールです。SBOM および CSAF ドキュメントを生成します。
   + [RetireJS](https://github.com/RetireJS/retire.js) - JavaScript に特化した依存関係チェッカです
   + [Safety](https://github.com/pyupio/safety) - 既知のセキュリティ脆弱性に対する Python 依存関係チェッカです
   + [bundler-audit](https://github.com/rubysec/bundler-audit) - Bundler 向けのパッチレベル検証 (Ruby サードパーティライブラリバージョンの監査) です
