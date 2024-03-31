@@ -14,6 +14,7 @@ DAST ツールはアプリケーションをビルドするソースコードや
 ### ツール
 - #### オープンソース:
   + [ZED Attack Proxy](https://www.zaproxy.org) - これは OWASP が提供するセキュリティテストを実行するためのオープンソースツールです
+  + [OWASP Nettacker](https://owasp.org/www-project-nettacker/) - API とウェブ UI を備えた自動情報収集と脆弱性スキャナです。
 
 - #### 商用:
   + [Acunetix](https://www.acunetix.com) - HTML5, JavaScript, シングルページアプリケーション (SPA) などのすべてのウェブアプリケーションを正確にスキャンおよび監査する自動ウェブセキュリティテストスキャナです
@@ -23,6 +24,7 @@ DAST ツールはアプリケーションをビルドするソースコードや
   + [Burp Suite](http://www.portswigger.net/) はウェブアプリケーションのセキュリティテストを実行するための統合プラットフォームです。さまざまなツールがシームレスに連携して、アプリケーションの攻撃対象領域の初期マッピングと分析から、セキュリティ脆弱性の発見とエクスプロイトに至るまで、テストプロセス全体をサポートします。
   + [HCL AppScan on Cloud](https://cloud.appscan.com) - サービスとして構築された DAST ツールです。パブリックアプリケーションとプライベートでホストされているアプリケーションの両方をスキャンできます。最新のウェブアプリケーションを調査およびテストし、手動で記録された手順を活用して複雑なログインシナリオを処理できます。
   + [Nuclei](https://github.com/projectdiscovery/nuclei) - シンプルな YAML ベースの DSL に基づく高速でカスタマイズ可能な脆弱性スキャナです。
+  + [Dastardly](https://portswigger.net/burp/documentation/dastardly) - CI/CD パイプラインで動作するように設計された軽量のウェブアプリケーションセキュリティスキャナです。
 
 ---
 ### 参考情報
