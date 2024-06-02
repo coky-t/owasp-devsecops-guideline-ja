@@ -8,14 +8,14 @@ OWASP DevSecOps ガイドラインはどのようにしてセキュアなパイ�
 ## 最初のステップ
 DevSecOps とは DevOps にセキュリティを取り込むことです。しかし CI/CD のペースに追いつくためにはソフトウェア作成やテストの初期段階でセキュリティを注入する必要があります。
 
-![DevSecOps cycle](/assets/images/DevSecOps-cycle.png)
+![DevSecOps cycle](assets/images/DevSecOps-cycle.png)
 
 [OWASP プロアクティブコントロール](https://owasp.org/www-project-proactive-controls/) にはすべての開発者がアプリケーションをコーディングする際に実装しなければならないセキュリティコントロールのトップ 10 をリストしています。このセットは DevSecOps サイクルでコードを設計、記述、またはテストしなければならないときの出発点と考えてください。
 
 また [OWASP ソフトウエアセキュリティ保証成熟度モデル (Software Assurance Maturity Model, SAMM)](https://owaspsamm.org/model/) にしたがって、成熟度に応じたセキュリティ要件 (およびその他) に対して考慮すべきことを確立することができます。
 
 ## パイプラインに追加するもの
-![DevSecOps pipeline](/assets/images/DevSecOps-pipeline.png)
+![DevSecOps pipeline](assets/images/DevSecOps-pipeline.png)
 最初に、基本的なパイプラインに以下のステップを実装することを検討します。
 * 潜在的なクレデンシャルの漏洩を発見するために git リポジトリをスキャンする
 * SCA (ソフトウェアコンポジション解析)
