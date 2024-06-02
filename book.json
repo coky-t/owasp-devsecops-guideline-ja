@@ -1,5 +1,5 @@
 {
-  "root" : "./document/old-versions/V0.2",
+  "root" : "./document/current-version",
   "plugins" : [ "anchors" ],
 
   "structure": {
