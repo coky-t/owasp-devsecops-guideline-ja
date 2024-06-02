@@ -1,5 +1,5 @@
 {
-  "root" : "./document/documents",
+  "root" : "./document/old-versions/V0.2",
   "plugins" : [ "anchors" ],
 
   "structure": {
