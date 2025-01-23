@@ -1,4 +1,4 @@
-## 目次:
+# 目次
 
 * [OWASP DevSecOps ガイドライン 日本語版](README.md)
 
