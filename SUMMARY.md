@@ -1,8 +1,10 @@
-# 目次
+# OWASP DevSecOps Guideline ja
 
-* [OWASP DevSecOps ガイドライン 日本語版](README.md)
+- [OWASP DevSecOps Guideline ja](README.md)
 
-* [OWASP DevSecOps ガイドライン](document/README.md)
+## OWASP DevSecOps ガイドライン 日本語版
+
+- [OWASP DevSecOps ガイドライン](document/README.md)
 
 ### V0.3
 
