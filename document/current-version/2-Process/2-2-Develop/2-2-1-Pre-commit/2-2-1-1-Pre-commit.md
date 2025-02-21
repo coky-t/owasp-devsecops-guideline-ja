@@ -8,11 +8,11 @@
 1. シークレットの管理
 2. コードのリンティング
 
-**Pre-commit** is a git feature that can be leveraged as part of the **shift-left security** approach where the developers are empowered to view the issues in the source code earlier in the SDLC process. When the developer runs a git-commit command to commit the code into their local repository, **pre-commit hook** check can be integrated with a security scanning tool executed to look for code quality issues, hard-coded secrets, insecure code, vulnerable dependencies/opensource libraries, etc..
+**pre-commit** は **シフトレフトセキュリティ** アプローチの一部として活用できる git 機能です。これは開発者が SDLC プロセスの早い段階でソースコードの問題を確認できるようになります。開発者が git-commit コマンドを実行してローカルリポジトリにコードをコミットする際、**pre-commit hook** チェックをセキュリティスキャンツールと統合して、コード品質の問題、ハードコードされたシークレット、安全でないコード、脆弱な依存関係/オープンソースライブラリなどを探すことができます。
 
-It is to be noted that pre-commit hooks are at the developer's local repository level and not the remote repository commonly used by all the developers working on the same project/application. In such cases when it's required to prevent security issues before they are submitted to a remote/central (Git) repository **pre-push hook** or **git-push** checks can be configured. Refer: https://git-scm.com/docs/git-push
+pre-commit hook は開発者のローカルリポジトリレベルにあり、同じプロジェクトやアプリケーションで作業しているすべての開発者が共通に使用するリモートリポジトリではないことに注意してください。このような場合、セキュリティ上の問題がリモートや中央の (Git) リポジトリに送信される前に防止する必要があるときには、**pre-push hook** または **git-push** チェックを構成できます。参照: https://git-scm.com/docs/git-push
 
-Another alternative approach to scan the source code for security issues (such as hardcoded-secrets, insecure code and vulnerable dependencies/opensource libraries) is the use of **SAST/SCA IDE plugins**. This works together with the IDEs used by developers while they write the code. Whereas, git-commit and git-push actions are used after the code is written by the developer. It is necessary to discern these distinct use-cases in order to implement the proper security controls at various levels based on the requirement.
+セキュリティ上の問題 (ハードコードされたシークレット、安全でないコード、脆弱な依存関係/オープンソースライブラリなど) のためにソースコードをスキャンする別の代替アプローチは **SAST/SCA IDE プラグイン** を使用することです。これは開発者がコードを書く際に使用する IDE と連携して機能します。一方、git-commit および git-push アクションは開発者がコードを書いた後に使用されます。要件に基づいてさまざまなレベルで適切なセキュリティコントロールを実装するには、これらの明確なユースケースを識別する必要があります。
 
 以下の画像は pre-commit が何を意味し、なぜそれを考慮しなければならないかをよりよく理解するためのものです。
 
