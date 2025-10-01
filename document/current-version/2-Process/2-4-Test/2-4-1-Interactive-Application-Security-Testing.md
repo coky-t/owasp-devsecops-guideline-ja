@@ -9,24 +9,24 @@ IAST ではチームがコードをビルド、テスト、デプロイする方
 IAST は開発サーバー、CI/CD パイプライン、品質保証サーバーに導入でき、また本番環境でも利用できます。サーバー、コンテナ、仮想マシン、クラウド、その他の環境など、コードが実行される場所であればどこでも IAST がインストールされます。IAST は複雑な API コードやデータに対する SAST や DAST の課題を克服しており、API セキュリティテストに非常に適しています。
 
 IAST センサーは以下のものにアクセスできます。
-+ コード全体
-+ 完全な HTTP リクエストとレスポンス
-+ データフローとコントロール
-+ 設定データ
-+ ライブラリやフレームワークとそれらの使用方法
-+ バックエンド接続データ
+
+- コード全体
+- 完全な HTTP リクエストとレスポンス
+- データフローとコントロール
+- 設定データ
+- ライブラリやフレームワークとそれらの使用方法
+- バックエンド接続データ
 
 この豊富なコンテキストにより、IAST は従来のアプリケーションセキュリティテストツールと比較して非常に正確であり、IAST は非常に詳細な詳細な調査結果を提供できるため、開発者は問題を理解して正しく修正できます。また IAST は以下のような非常に広範囲のアプリケーションセキュリティ脆弱性をカバーできます。
-+ ハードコードされたシークレットや脆弱な暗号化アルゴリズムなどのコードに関する問題
-+ インジェクションや SSRF などのデータフローに関する問題
-+ クリックジャッキング、パラメータ汚染、ヘッダ欠落などの HTTP に関する問題
-+ SSRF などのバックエンド接続に関する問題
-+ 動詞の改竄 (Verb Tamparing) や脆弱な認証などの設定に関する問題
-+ その他いろいろ
 
+- ハードコードされたシークレットや脆弱な暗号化アルゴリズムなどのコードに関する問題
+- インジェクションや SSRF などのデータフローに関する問題
+- クリックジャッキング、パラメータ汚染、ヘッダ欠落などの HTTP に関する問題
+- SSRF などのバックエンド接続に関する問題
+- 動詞の改竄 (Verb Tamparing) や脆弱な認証などの設定に関する問題
+- その他いろいろ
 
 IAST の課題の一つは実行されたコードのみがテストされることです。しかし、単純なエンドツーエンドの「スモーク」テストや単純なクローラーを使用して、このカバレッジを生成することは簡単です。IAST は大規模な機能テストを必要とせず、基本的なエンドツーエンドの経路の実行だけを必要とします。IAST ツールの中にはアプリケーションから一連の経路を抽出して、経路カバレッジを 100% にするプロセスを簡素化するものがあります。
-
 
 ---
 
@@ -40,21 +40,28 @@ IAST の課題の一つは実行されたコードのみがテストされるこ
 
 ---
 
-### ツール
+## ツール[^1]
 
-+ [Contrast Assess](https://www.contrastsecurity.com/contrast-assess) and [Contrast Community Edition](https://www.contrastsecurity.com/contrast-community-edition)
-+ [Checkmarx Interactive Application Security Testing(CxIAST)](https://www.checkmarx.com/products/interactive-application-security-testing/)
-+ [Seeker Interactive Application Security Testing](https://www.synopsys.com/software-integrity/security-testing/interactive-application-security-testing.html)
-+ [HCL AppScan on Cloud](https://cloud.appscan.com)
+### オープンソース
+
+### 商用
+
+- [Checkmarx Interactive Application Security Testing(CxIAST)](https://www.checkmarx.com/products/interactive-application-security-testing/)
+- [Contrast Assess](https://www.contrastsecurity.com/contrast-assess) and [Contrast Community Edition](https://www.contrastsecurity.com/contrast-community-edition)
+- [HCL AppScan on Cloud](https://cloud.appscan.com)
+- [Seeker Interactive Application Security Testing](https://www.synopsys.com/software-integrity/security-testing/interactive-application-security-testing.html)
 
 ---
-### 参考情報
 
-+ [OWASP - Free IAST Tools](https://owasp.org/www-community/Free_for_Open_Source_Application_Security_Tools#:~:text=open%20source%20projects.-,IAST%20Tools,-IAST%20tools%20are)
-+ [Contrast Security - What is Interactive Application Security Testing?](https://www.contrastsecurity.com/knowledge-hub/glossary/interactive-application-security-testing)
-+ [Veracode - IAST](https://www.veracode.com/security/interactive-application-security-testing-iast)
-+ [Hdivsecurity - IAST](https://hdivsecurity.com/bornsecure/what-is-iast-interactive-application-security-testing/)
-+ [Synk - IAST](https://snyk.io/learn/iast-interactive-application-security-testing/)
-+ [Acunetix - IAST](https://www.acunetix.com/blog/web-security-zone/what-is-iast-interactive-application-security-testing/)
-+ [Contrast Security - Why the difference sast, dast, and iast mastters](https://www.contrastsecurity.com/security-influencers/why-the-difference-between-sast-dast-and-iast-matters)
-+ [Esecurityplanet - Application security vendors](https://www.esecurityplanet.com/products/application-security-vendors/)
+### リンク
+
+- [Acunetix - IAST](https://www.acunetix.com/blog/web-security-zone/what-is-iast-interactive-application-security-testing/)
+- [Contrast Security - What is Interactive Application Security Testing?](https://www.contrastsecurity.com/knowledge-hub/glossary/interactive-application-security-testing)
+- [Contrast Security - Why the difference sast, dast, and iast mastters](https://www.contrastsecurity.com/security-influencers/why-the-difference-between-sast-dast-and-iast-matters)
+- [Esecurityplanet - Application security vendors](https://www.esecurityplanet.com/products/application-security-vendors/)
+- [Hdivsecurity - IAST](https://hdivsecurity.com/bornsecure/what-is-iast-interactive-application-security-testing/)
+- [OWASP - Free IAST Tools](https://owasp.org/www-community/Free_for_Open_Source_Application_Security_Tools#:~:text=open%20source%20projects.-,IAST%20Tools,-IAST%20tools%20are)
+- [Synk - IAST](https://snyk.io/learn/iast-interactive-application-security-testing/)
+- [Veracode - IAST](https://www.veracode.com/security/interactive-application-security-testing-iast)
+
+[^1]: アルファベット順にリストされています。
