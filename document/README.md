@@ -41,7 +41,7 @@ CI/CD は SecOps にとって有利であり、セキュリティ対策やコン
 
 ---
 
-## 目次:
+## 目次
 
 - [0-概論 (Intro)](current-version/0-Intro)
   - [0-1-序文 (Intro)](current-version/0-Intro/0-1-Intro.md)
