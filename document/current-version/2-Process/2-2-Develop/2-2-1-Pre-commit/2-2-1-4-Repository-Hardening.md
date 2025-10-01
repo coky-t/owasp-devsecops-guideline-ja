@@ -1,21 +1,24 @@
-## リポジトリ堅牢化
+# リポジトリ堅牢化
+
 コードリポジトリを保護するには、さまざまなプラクティスとテクニックを導入して、認可されていないアクセス、データ侵害、その他のセキュリティ脅威から保護します。そうすることで、コードとそれに関連するリソースの完全性、機密性、可用性を確保できます。
 
+## 目的
 
-### 目的
 - **認可されていないアクセスの防止:** 認可された担当者のみがリポジトリにアクセスして変更できるようにします。
 - **機密情報の保護:** シークレット、パスワード、その他の機密データを保護します。
 - **コード完全性の維持:** コードが改竄や破損しないことを確保します。
 - **コンプライアンス:** コードセキュリティに関する規制および業界標準に準拠します。
 
-### キーコンセプト
+## キーコンセプト
+
 - **アクセス制御:** 誰がリポジトリにアクセスでき、どのようなアクションを実行できるかを管理します。
 - **シークレット管理:** API キーやパスワードなどの機密データを安全に処理します。
 - **監査と監視:** リポジトリのアクティビティを追跡し続け、セキュリティインシデントを検出して対応します。
 - **コード品質とセキュリティ:** コードベースに脆弱性がないこと、およびセキュリティベストプラクティスに準拠していることを確保します。
 - **バックアップとリカバリ:** データをバックアップし、障害や侵害の場合に復元できることを確保します。
 
-### リポジトリ堅牢化のベストプラクティス
+## リポジトリ堅牢化のベストプラクティス
+
 1. **アクセス制御**
     - **最小権限の原則:** ユーザーに必要最小限のパーミッションを付与します。
     - **ロールベースのアクセス制御 (RBAC):** 特定の権限を持つロールを定義し、これらの役割にユーザーを割り当てます。
@@ -37,12 +40,12 @@
     - **定期的なバックアップ:** リポジトリデータが定期的にバックアップされ、安全に保存されるようにします。
     - **災害復旧計画:** 災害復旧計画を策定しテストして、侵害や障害の場合にリポジトリデータを復元します。
 
+---
 
-
-## 参考情報
+### リンク
 
 - [GitHub Security Best Practices](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure)
 - [GitLab Security Guide](https://docs.gitlab.com/ee/user/application_security/)
-- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
 - [HashiCorp Vault Documentation](https://www.vaultproject.io/docs)
+- [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
 - [SonarQube Documentation](https://docs.sonarqube.org/latest/)
