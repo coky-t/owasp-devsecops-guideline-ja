@@ -31,6 +31,7 @@ DAST ツールはアプリケーションをビルドするソースコードや
 - [Netsparker](https://www.netsparker.com) - 基盤となるアーキテクチャやプラットフォームに関係なく、あらゆるタイプの最新のウェブアプリケーションの脆弱性を特定できます
 - [Nuclei](https://github.com/projectdiscovery/nuclei) - シンプルな YAML ベースの DSL に基づく高速でカスタマイズ可能な脆弱性スキャナです。
 - [Veracode Dynamic Analysis](https://www.veracode.com/products/dynamic-analysis-dast) - Veracode Dynamic Analysis は悪用可能な脆弱性に関して企業が大規模にウェブアプリケーションをスキャンするのに役立ちます
+- [Escape DAST](https://escape.tech) - Escape DAST は、大規模なビジネスロジックの脆弱性をテストし、API (GraphQL など) やシングルページアプリ (SPA) などの現代のアプリケーションにおける複雑な認証シナリオを処理するために意図的に構築されています
 
 ---
 
