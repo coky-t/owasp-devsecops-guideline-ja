@@ -19,11 +19,11 @@
 
 ## コンテナスキャナをいつどこで使用するか？
 
-![Development process diagram showing container scanning](<../../../../../../.gitbook/assets/Dev-process (1).png>)
+![Development process diagram showing container scanning](../../../../../../.gitbook/assets/Dev-process.png)
 
 たとえば Dockerfile を実際にビルドし、作成されたイメージを確認する際の build フェーズで使用できます。コンテナスキャナを実行する別の場所としては、コンテナをレジストリにプッシュするときや、コンテナをレジストリからプルするときがあります。しかし、信頼できるコンテナレジストリにプッシュする前にスキャンすることがよいアプローチです。そうすれば、すべてのイメージがスキャンされたものであるコンテナレジストリがあると言うことができ、本番環境にデプロイする際にはこの信頼できるコンテナレジストリからプルできます。 (以下の画像をご覧ください)
 
-![Container security pipeline showing scanning process](<../../../../../../.gitbook/assets/container-security-pipeline (1).png>)
+![Container security pipeline showing scanning process](../../../../../../.gitbook/assets/container-security-pipeline.png)
 
 ***
 

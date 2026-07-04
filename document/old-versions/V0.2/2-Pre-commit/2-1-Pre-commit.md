@@ -13,7 +13,7 @@
 
 以下の画像は pre-commit が何を意味し、なぜそれを考慮しなければならないかをよりよく理解するためのものです。
 
-![Pre Commit](<../../../../.gitbook/assets/pre-commit (2).png>)
+![Pre Commit](../../../../.gitbook/assets/pre-commit.png)
 
 ### ツール:
 

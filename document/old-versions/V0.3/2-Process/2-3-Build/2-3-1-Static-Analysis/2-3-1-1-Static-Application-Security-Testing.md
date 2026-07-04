@@ -1,6 +1,6 @@
 # 2-3-1-1-静的アプリケーションセキュリティテスト (Static-Application-Security-Testing)
 
-![Static scanning diagram showing analysis process](<../../../../../../.gitbook/assets/Static scanning (2).png>)
+![Static scanning diagram showing analysis process](<../../../../../../.gitbook/assets/Static scanning.png>)
 
 静的コード解析またはソースコード解析は一般的にコードレビュー (ホワイトボックステスト) の一部であり、プログラムを実行せずにコードを調べることにより行われるコンピュータプログラムデバッグ手法です。
 
