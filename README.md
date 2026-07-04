@@ -2,7 +2,7 @@
 
 This is the unofficial Japanese translation of the [OWASP DevSecOps Guideline](https://github.com/OWASP/DevSecOpsGuideline).
 
-<!-- **!!! Work In Progress !!!** -->
+**!!! Work In Progress !!!**
 
 <!-- - Document Site - <https://coky-t.gitbook.io/owasp-devsecops-guideline-ja/> -->
 - Document Repository - <https://github.com/coky-t/owasp-devsecops-guideline-ja>
@@ -16,6 +16,75 @@ This is the unofficial Japanese translation of the [OWASP DevSecOps Guideline](h
 ## OWASP DevSecOps ガイドライン 日本語版
 
 * [README](document/README.md)
+
+### 2025/2026
+
+- [0-概論 (Intro)](document/current-version/0-Intro)
+  - [0-1-序文 (Intro)](document/current-version/0-Intro/0-1-Intro.md)
+  - [0-2-概要 (Overview)](document/current-version/0-Intro/0-2-Overview.md)
+  - [0-3-フレームワークと標準 (Frameworks-and-Standards)](document/current-version/0-Intro/0-3-Frameworks-and-Standards.md)
+- [1-要員 (People)](document/current-version/1-People)
+  - [1-1-チーム形成 (Shape-the-team)](document/current-version/1-People/1-1-Shape-the-team)
+    - [1-1-1-セキュリティチャンピオン (Security-champions)](document/current-version/1-People/1-1-Shape-the-team/1-1-1-Security-champions.md)
+    - [1-1-2-役割と責任 (Roles-and-Responsibilities)](document/current-version/1-People/1-1-Shape-the-team/1-1-2-Roles-and-Responsibilities.md)
+  - [1-2-トレーニング (Training)](document/current-version/1-People/1-2-Training)
+    - [1-2-1-セキュアコーディング (Secure-coding)](document/current-version/1-People/1-2-Training/1-2-1-Secure-coding.md)
+    - [1-2-2-セキュリティ CI/CD (Security-CICD)](document/current-version/1-People/1-2-Training/1-2-2-Security-CICD.md)
+    - [1-2-3-セキュリティ文化と意識 (Security-culture-and-awareness)](document/current-version/1-People/1-2-Training/1-2-3-Security-culture-and-awareness.md)
+- [2-プロセス (Process)](document/current-version/2-Process)
+  - [2-1-設計 (Design)](document/current-version/2-Process/2-1-Design)
+    - [2-1-1-脅威モデリング (Threat-modeling)](document/current-version/2-Process/2-1-Design/2-1-1-Threat-modeling.md)
+    - [2-1-2-セキュアな設計と要件 (Secure-design-and-requirements)](document/current-version/2-Process/2-1-Design/2-1-2-Secure-design-and-requirements.md)
+  - [2-2-開発 (Develop)](document/current-version/2-Process/2-2-Develop)
+    - [2-2-1-コミット前 (Pre-commit)](document/current-version/2-Process/2-2-Develop/2-2-1-Pre-commit)
+      - [2-2-1-1-プレコミット (Pre-commit)](document/current-version/2-Process/2-2-Develop/2-2-1-Pre-commit/2-2-1-1-Pre-commit.md)
+      - [2-2-1-2-シークレット管理 (Secrets-Management)](document/current-version/2-Process/2-2-Develop/2-2-1-Pre-commit/2-2-1-2-Secrets-Management.md)
+      - [2-2-1-3-コードのリンティング (Linting-code)](document/current-version/2-Process/2-2-Develop/2-2-1-Pre-commit/2-2-1-3-Linting-code.md)
+      - [2-2-1-4-リポジトリ堅牢化 (Repository-Hardening)](document/current-version/2-Process/2-2-Develop/2-2-1-Pre-commit/2-2-1-4-Repository-Hardening.md)
+    - [2-2-2-IDE と AI 支援開発 (IDE-and-AI-assisted-development)](document/current-version/2-Process/2-2-Develop/2-2-2-IDE-and-AI-assisted-development.md)
+  - [2-3-ビルド (Build)](document/current-version/2-Process/2-3-Build)
+    - [2-3-1-静的解析 (Static-Analysis)](document/current-version/2-Process/2-3-Build/2-3-1-Static-Analysis)
+      - [2-3-1-1-静的アプリケーションセキュリティテスト (Static-Application-Security-Testing)](document/current-version/2-Process/2-3-Build/2-3-1-Static-Analysis/2-3-1-1-Static-Application-Security-Testing.md)
+    - [2-3-2-ソフトウェアコンポジション解析 (Software-Composition-Analysis)](document/current-version/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis)
+      - [2-3-2-1-ソフトウェアコンポジション解析 (Software-Composition-Analysis)](document/current-version/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-1-Software-Composition-Analysis.md)
+    - [2-3-3-コンテナセキュリティ (Container-Security)](document/current-version/2-Process/2-3-Build/2-3-3-Container-Security)
+      - [2-3-3-1-コンテナスキャン (Container-Scanning)](document/current-version/2-Process/2-3-Build/2-3-3-Container-Security/2-3-3-1-Container-Scanning.md)
+      - [2-3-3-2-コンテナ堅牢化 (Container-Hardening)](document/current-version/2-Process/2-3-Build/2-3-3-Container-Security/2-3-3-2-Container-Hardening.md)
+    - [2-3-4-Infrastructure as Code セキュリティ (Infrastructure-as-Code-Security)](document/current-version/2-Process/2-3-Build/2-3-4-Infrastructure-as-Code-Security)
+      - [2-3-4-1-Infrastructure as Code スキャン (Infrastructure-as-Code-Scanning)](document/current-version/2-Process/2-3-Build/2-3-4-Infrastructure-as-Code-Security/2-3-4-1-Infrastructure-as-Code-Scanning.md)
+    - [2-3-5-セキュリティゲート (Security-Gates)](document/current-version/2-Process/2-3-Build/2-3-5-Security-Gates.md)
+    - [2-3-6-サプライチェーンセキュリティ (Supply-Chain-Security)](document/current-version/2-Process/2-3-Build/2-3-6-Supply-Chain-Security)
+      - [2-3-6-1-SBOM (SBOM)](document/current-version/2-Process/2-3-Build/2-3-6-Supply-Chain-Security/2-3-6-1-SBOM.md)
+      - [2-3-6-2-アーティファクトの署名と来歴 (Artifact-Signing-and-Provenance)](document/current-version/2-Process/2-3-Build/2-3-6-Supply-Chain-Security/2-3-6-2-Artifact-Signing-and-Provenance.md)
+      - [2-3-6-3-CICD パイプラインセキュリティ (CICD-Pipeline-Security)](document/current-version/2-Process/2-3-Build/2-3-6-Supply-Chain-Security/2-3-6-3-CICD-Pipeline-Security.md)
+  - [2-4-テスト (Test)](document/current-version/2-Process/2-4-Test)
+    - [2-4-1-インタラクティブアプリケーションセキュリティテスト (Interactive-Application-Security-Testing)](document/current-version/2-Process/2-4-Test/2-4-1-Interactive-Application-Security-Testing.md)
+    - [2-4-2-動的アプリケーションセキュリティテスト (Dynamic-Application-Security-Testing)](document/current-version/2-Process/2-4-Test/2-4-2-Dynamic-Application-Security-Testing.md)
+    - [2-4-3-モバイルアプリケーションセキュリティテスト (Mobile-Application-Security-Test)](document/current-version/2-Process/2-4-Test/2-4-3-Mobile-Application-Security-Test.md)
+    - [2-4-4-API セキュリティ (API-Security)](document/current-version/2-Process/2-4-Test/2-4-4-API-Security.md)
+    - [2-4-5-構成ミスチェック (Misconfiguration-Check)](document/current-version/2-Process/2-4-Test/2-4-5-Misconfiguration-Check.md)
+  - [2-5-リリース (Release)](document/current-version/2-Process/2-5-Release)
+    - [2-5-1-リリース (Release)](document/current-version/2-Process/2-5-Release/2-5-1-Release.md)
+  - [2-6-デプロイ (Deploy)](document/current-version/2-Process/2-6-Deploy)
+    - [2-6-1-デプロイ (Deploy)](document/current-version/2-Process/2-6-Deploy/2-6-1-Deploy.md)
+  - [2-7-運用 (Operate)](document/current-version/2-Process/2-7-Operate)
+    - [2-7-1-クラウドネイティブセキュリティ (Cloud-Native-Security)](document/current-version/2-Process/2-7-Operate/2-7-1-Cloud-Native-Security.md)
+    - [2-7-2-ログ記録と監視 (Logging-and-Monitoring)](document/current-version/2-Process/2-7-Operate/2-7-2-Logging-and-Monitoring.md)
+    - [2-7-3-ペンテスト (Pentest)](document/current-version/2-Process/2-7-Operate/2-7-3-Pentest.md)
+    - [2-7-4-脆弱性管理 (Vulnerability-Management)](document/current-version/2-Process/2-7-Operate/2-7-4-Vulnerability-Management.md)
+    - [2-7-5-VDP とバグバウンティ (VDP-and-Bug-bounty)](document/current-version/2-Process/2-7-Operate/2-7-5-VDP-and-Bug-bounty.md)
+    - [2-7-6-侵害と攻撃のシミュレーション (Breach-and-attack-simulation)](document/current-version/2-Process/2-7-Operate/2-7-6-Breach-and-attack-simulation.md)
+- [3-ガバナンス (Governance)](document/current-version/3-Governance)
+  - [3-1-コンプライアンス監査 (Compliance-Auditing)](document/current-version/3-Governance/3-1-Compliance-Auditing)
+    - [3-1-1-コンプライアンス監査 (Compliance-Auditing)](document/current-version/3-Governance/3-1-Compliance-Auditing/3-1-1-Compliance-Auditing.md)
+    - [3-1-2-Policy as Code (Policy-as-code)](document/current-version/3-Governance/3-1-Compliance-Auditing/3-1-2-Policy-as-code.md)
+    - [3-1-3-セキュリティベンチマーク (Security-benchmarking)](document/current-version/3-Governance/3-1-Compliance-Auditing/3-1-3-Security-benchmarking.md)
+  - [3-2-データ保護 (Data-protection)](document/current-version/3-Governance/3-2-Data-protection.md)
+  - [3-3-レポーティング (Reporting)](document/current-version/3-Governance/3-3-Reporting)
+    - [3-3-1-成熟度追跡 (Tracking-maturities)](document/current-version/3-Governance/3-3-Reporting/3-3-1-Tracking-maturities.md)
+    - [3-3-2-脆弱性一元管理ダッシュボード (Central-vulnerability-management-dashboard)](document/current-version/3-Governance/3-3-Reporting/3-3-2-Central-vulnerability-management-dashboard.md)
+    - [3-3-3-ASPM (ASPM)](document/current-version/3-Governance/3-3-Reporting/3-3-3-ASPM.md)
+  - [3-4-AI ガバナンスとリスク (AI-Governance-and-Risk)](document/current-version/3-Governance/3-4-AI-Governance-and-Risk.md)
 
 ### V0.3
 
