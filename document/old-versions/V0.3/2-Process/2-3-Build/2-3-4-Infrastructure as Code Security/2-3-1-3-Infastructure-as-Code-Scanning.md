@@ -1,10 +1,10 @@
-# Infrastructure as Code スキャン
+# 2-3-1-3-Infastructure as Code スキャン (Infastructure-as-Code-Scanning)
 
 IaC スキャンとはインフラストラクチャのセットアップと管理に使われるコードをチェックすることを意味します。このコードは、Terraform や Ansible などのツールで記述され、サーバー、ネットワーク、インフラストラクチャのその他の部分をどのように作成するかを定義します。IaC スキャンの目的はインフラストラクチャをデプロイする前の早期にセキュリティの問題や間違いを発見することです。こうすることで、チームは最初からインフラストラクチャがセキュリティルールや会社のポリシーに従っていることを確認できます。このようなチェックはコードが実際のシステムで使用される前に、開発プロセスの一環として行われます。
 
 開発チームが Terraform を使用して AWS のクラウドリソースのプロビジョニングを自動化するシナリオを考えてみましょう。簡略化した例を以下に示します。
 
-```terraform 
+```terraform
 # Terraform script to create an S3 bucket
 
 provider "aws" {
@@ -25,23 +25,21 @@ IaC スキャンで見つかった結果により、開発チームが Terraform
 
 次のパートでは、アプリケーションの開発とデプロイメントのさまざまなフェーズでさまざまなタイプの IaC スキャンに対処するのに役立つツールのリストを紹介します。
 
----
+***
 
-## ツール[^1]
+## ツール
 
 ### オープンソース
 
-- [ansible-lint](https://github.com/ansible-community/ansible-lint) - Ansible 向けのベストプラクティスチェッカーです。
-- [Checkov](https://github.com/bridgecrewio/checkov) - Terraform, Cloudformation, Kubernetes, Serverless フレームワーク, その他の Infrastructure as Code 言語の構築時に Bridgecrew の Checkov でクラウドの設定ミスを防ぎます。
-- [KICS](https://github.com/Checkmarx/kics) - Find security vulnerabilities, compliance issues, and infrastructure misconfigurations early in the development cycle of your infrastructure-as-code with KICS by Checkmarx.
-- [puppet-lint](https://github.com/rodjek/puppet-lint) - Puppet マニフェストがスタイルガイドに準拠していることをチェックします。
-- [terrascan](https://github.com/accurics/terrascan) - Infrastructure as Code のコンプライアンスとセキュリティ違反を検出して、クラウドネイティブインフラストラクチャをプロビジョニングする前にリスクを軽減します。
-- [tflint](https://github.com/terraform-linters/tflint) - プラグ可能な Terraform リンターです。
-- [tfsec](https://github.com/tfsec/tfsec) - Terraform コード向けのセキュリティスキャナです。
-- [Trivy](https://github.com/aquasecurity/trivy) - Docker, Kubernetes, Terraform, CloudFormation の設定問題を検出するためのビルトインポリシーを提供します。また、Conftest のように Rego で独自のポリシーを記述して JSON, YAML などをスキャンできます。
+* [ansible-lint](https://github.com/ansible-community/ansible-lint) - Ansible 向けのベストプラクティスチェッカーです。
+* [Checkov](https://github.com/bridgecrewio/checkov) - Terraform, Cloudformation, Kubernetes, Serverless フレームワーク, その他の Infrastructure as Code 言語の構築時に Bridgecrew の Checkov でクラウドの設定ミスを防ぎます。
+* [KICS](https://github.com/Checkmarx/kics) - Find security vulnerabilities, compliance issues, and infrastructure misconfigurations early in the development cycle of your infrastructure-as-code with KICS by Checkmarx.
+* [puppet-lint](https://github.com/rodjek/puppet-lint) - Puppet マニフェストがスタイルガイドに準拠していることをチェックします。
+* [terrascan](https://github.com/accurics/terrascan) - Infrastructure as Code のコンプライアンスとセキュリティ違反を検出して、クラウドネイティブインフラストラクチャをプロビジョニングする前にリスクを軽減します。
+* [tflint](https://github.com/terraform-linters/tflint) - プラグ可能な Terraform リンターです。
+* [tfsec](https://github.com/tfsec/tfsec) - Terraform コード向けのセキュリティスキャナです。
+* [Trivy](https://github.com/aquasecurity/trivy) - Docker, Kubernetes, Terraform, CloudFormation の設定問題を検出するためのビルトインポリシーを提供します。また、Conftest のように Rego で独自のポリシーを記述して JSON, YAML などをスキャンできます。
 
----
+***
 
 ### リンク
-
-[^1]: アルファベット順にリストされています。
