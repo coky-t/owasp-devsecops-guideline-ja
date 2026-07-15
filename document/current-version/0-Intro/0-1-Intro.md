@@ -1,12 +1,12 @@
-# Introduction
+# 序文
 
-The OWASP DevSecOps Guideline explains how to build and operate a secure software delivery pipeline using best practices and a curated, vendor-neutral set of tools. The aim is to help organizations of any size that run a DevOps pipeline introduce security controls without slowing delivery, and to promote a **shift-left** (and increasingly **shift-everywhere**) security culture across the whole development lifecycle.
+OWASP DevSecOps Guideline は、ベストプラクティスと、厳選されたベンダー中立なツール群を使用して、セキュアなソフトウェアデリバリパイプラインを構築して運用する方法を説明しています。その目的は、DevOps パイプラインを動かすあらゆる規模の組織がデリバリを遅くすることなくセキュリティコントロールを導入するように支援すること、開発ライフサイクル全体を通じて **シフトレフト** (そしてさらには **シフトエブリウェア**) のセキュリティ文化を促進することです。
 
-The ideal goal of this guideline is simple:
+このガイドラインの理想とする目標は以下のようにシンプルです。
 
-> **Detect security issues — whether design flaws or application vulnerabilities — as early and as cheaply as possible, and keep detecting them continuously.**
+> **設計上の欠陥であれアプリケーションの脆弱性であれ、セキュリティ上の問題を可能な限り早くかつ安く検出し、継続的に検出し続けること。**
 
-DevSecOps is about embedding security *into* DevOps. To keep up with the pace of CI/CD, security cannot be a gate at the end; it has to be injected early into how software is designed, written, built, tested, and operated, and then continuously validated in production.
+DevSecOps とは DevOps *内に* セキュリティを組み込むことです。CI/CD のペースに追従するには、セキュリティは最後の関門とするのではなく、ソフトウェアの設計、記述、ビルド、テスト、運用内に早期に組み込み、本番環境でも継続的に検証していく必要があります。
 
 ## Why DevSecOps — the cost of waiting
 
