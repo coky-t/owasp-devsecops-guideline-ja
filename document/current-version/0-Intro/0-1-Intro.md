@@ -8,13 +8,13 @@ OWASP DevSecOps Guideline は、ベストプラクティスと、厳選された
 
 DevSecOps とは DevOps *内に* セキュリティを組み込むことです。CI/CD のペースに追従するには、セキュリティは最後の関門とするのではなく、ソフトウェアの設計、記述、ビルド、テスト、運用内に早期に組み込み、本番環境でも継続的に検証していく必要があります。
 
-## Why DevSecOps — the cost of waiting
+## なぜ DevSecOps なのか — 遅れによるコスト
 
-The earlier a vulnerability is found, the cheaper it is to fix. IBM's Systems Science Institute research consistently shows that a defect found in the design phase costs roughly 6× less to fix than one found in implementation, and 100× less than one found in production. These ratios are not exact — they depend on the defect type and system — but the directional truth holds across the industry: late discovery is expensive.
+脆弱性が早期に発見されるほど、その修正を安価に抑えられます。IBM の Systems Science Institute の調査によると、設計段階で発見された欠陥の修正コストは、実装段階で発見されたものと比べておよそ 6 分の 1 になり、本番環境で発見されたものと比べておよそ 100 分の 1 になることを、一貫して示しています。これらの比率は厳密ではなく、欠陥の種類やシステムによって異なりますが、発見が遅れるほど費用が増大する、というのが業界全体にわたる方向性を示す事実です。
 
-But there is a second, harder cost that the numbers do not fully capture: a vulnerability in production that is *exploited* does not just carry a remediation cost — it carries breach costs, regulatory penalties, reputational damage, customer harm, and executive accountability. The 2020 SolarWinds supply-chain attack, the 2021 Log4Shell disclosure affecting millions of systems, and the 2019 Capital One breach (via a misconfigured WAF/SSRF) all share a common thread: the exploit path existed because security was not a continuous concern throughout delivery.
+しかし、数字だけでは捕捉できないより深刻なコストがもうひとつあります。本番環境で脆弱性が *悪用される* と、修復コストを負担するだけでなく、侵害によるコスト、規制当局からの制裁、評判の低下、顧客への被害、経営陣の説明責任という負担もあります。2020 年の SolarWinds サプライチェーン攻撃、2021 年に数百万のシステムに影響を及ぼした Log4Shell 情報漏洩、2019 年の Capital One 侵害 (WAF/SSRF の設定ミスによる) はすべてが共通の脅威を共有しています。セキュリティがデリバリ全体を通して継続的に考慮されていないために、悪用経路が存在していたということです。
 
-Traditional security — a penetration test weeks before release, a security team that reviews code on request — cannot keep up with teams that ship multiple times a day. DevSecOps resolves this by automating what can be automated, making security feedback immediate, and building shared ownership so risk decisions happen at the right level.
+リリースの数週前のペネトレーションテストや、リクエストを受けてコードをレビューするセキュリティチームといった、従来のセキュリティは一日に幾度も出荷するチームには追従できません。DevSecOps は、自動化可能なものを自動化し、セキュリティに関するフィードバックを即座に得られるとともに、リスクに関する判断が適切なレベルでできるように共有されたオーナーシップを築くことで、これを解決します。
 
 ## How this guideline is organized
 
