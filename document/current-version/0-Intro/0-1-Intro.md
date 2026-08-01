@@ -36,15 +36,15 @@ DevSecOps とは DevOps *内に* セキュリティを組み込むことです�
 
 独自の SDLC やアーキテクチャに合わせてこれらの段階をカスタマイズでき、成熟度が高まるにつれて段階的に自動化を追加できます。
 
-## What DevSecOps is NOT
+## DevSecOps ではないもの
 
-Understanding the common misconceptions is as important as knowing the definition:
+その定義を知ることと同様に、よくある誤解を理解することも重要です。
 
-- **DevSecOps is not "security team in the pipeline"** — adding security engineers to approve every PR does not scale. The goal is to give developers the tools, training, and context to make security decisions themselves, with the security team acting as an enabler and escalation path, not a gatekeeper.
-- **DevSecOps is not tool procurement** — buying a SAST, SCA, and DAST tool without a triage process, clear ownership, and remediation SLAs creates alert fatigue and false confidence. Tools are enablers; process and culture are the program.
-- **DevSecOps is not a one-time project** — there is no "done." The threat landscape, your architecture, your dependencies, and your regulatory obligations all change continuously. DevSecOps is a continuous practice, not a migration.
-- **DevSecOps is not compliance** — passing an audit is a floor, not a ceiling. Compliance frameworks describe minimum bars against known risks; a real-world adversary does not follow the framework. Design for adversaries, not just auditors.
-- **DevSecOps is not just CI/CD** — the pipeline is important, but threat modeling happens at design, culture happens in teams, runtime security happens in production, and vulnerability disclosure happens at the boundary with the outside world. The pipeline is one layer of a much broader system.
+- **DevSecOps は「パイプラインでのセキュリティチーム」ではありません** — すべての PR を承認するためにセキュリティエンジニアを追加するのではスケールしません。目標は、開発者自身がセキュリティ判断を下せるように、ツール、トレーニング、コンテキストを提供することであり、セキュリティチームはゲートキーパーではなくイネーブラーおよびエスカレーションパスとしての役割を担います。
+- **DevSecOps はツール調達ではありません** — トリアージプロセス、明確な責任の所在、修正に関する SLA を定めずに SAST, SCA, DAST を導入しても、アラート疲れや過信を招きます。ツールは手段であり、プロセスや文化がその中核を成します。
+- **DevSecOps は単発のプロジェクトではありません** — 「完了」はありません。脅威の状況、アーキテクチャ、依存関係、規制上の義務は絶えず変化し続けます。DevSecOps は継続的な実践であり、移行作業ではありません。
+- **DevSecOps はコンプライアンスではありません** — 監査に合格することは最低限であり、到達点ではありません。コンプライアンスの枠組みは既知のリスクに対する最低限の基準を示すものであり、実際の敵対者はその枠済みに沿うわけではありません。敵対者に対して設計します。監査担当者だけではありません。
+- **DevSecOps は単なる CI/CD ではありません** — パイプラインは重要ですが、脅威モデリングが設計で起こり、文化がチーム内に起こり、ランタイムセキュリティが本番で起こり、脆弱性開示が外部世界との境界で起こります。パイプラインはより広範なシステムの一つの層に過ぎません。
 
 ## A note on the pipeline itself
 
