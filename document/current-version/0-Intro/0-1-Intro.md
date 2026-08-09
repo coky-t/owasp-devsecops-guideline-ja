@@ -46,9 +46,9 @@ DevSecOps とは DevOps *内に* セキュリティを組み込むことです�
 - **DevSecOps はコンプライアンスではありません** — 監査に合格することは最低限であり、到達点ではありません。コンプライアンスの枠組みは既知のリスクに対する最低限の基準を示すものであり、実際の敵対者はその枠済みに沿うわけではありません。敵対者に対して設計します。監査担当者だけではありません。
 - **DevSecOps は単なる CI/CD ではありません** — パイプラインは重要ですが、脅威モデリングが設計で起こり、文化がチーム内に起こり、ランタイムセキュリティが本番で起こり、脆弱性開示が外部世界との境界で起こります。パイプラインはより広範なシステムの一つの層に過ぎません。
 
-## A note on the pipeline itself
+## パイプライン自体の注意点
 
-CI/CD is a powerful entry point for security automation, but the build and automation tooling is also part of your attack surface. Compromised pipelines, leaked tokens, and poisoned dependencies are now among the most damaging attack vectors — the SolarWinds, Codecov, and XZ Utils incidents all illustrate how the build and supply chain can be abused to reach production at scale. This guideline therefore treats **securing the pipeline** as a first-class concern alongside securing the application.
+CI/CD はセキュリティ自動化の強力なエントリポイントですが、ビルドや自動ツールも攻撃対象領域の一部となります。侵害されたパイプライン、漏洩したトークン、汚染された依存関係は、現在、最も被害をもたらす攻撃ベクトルの一つです。SolarWinds, Codecov, XZ Utils のインシデントはすべて、ビルドやサプライチェーンが悪用されることで、製品に大規模な影響を及ぼす可能性があることを示しています。そのため、このガイドラインは、アプリケーションの保護と並んで、**パイプラインの保護** を最優先事項として扱います。
 
 ## How to use this guideline
 
