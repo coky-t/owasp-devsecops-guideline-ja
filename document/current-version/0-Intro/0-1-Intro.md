@@ -50,18 +50,18 @@ DevSecOps とは DevOps *内に* セキュリティを組み込むことです�
 
 CI/CD はセキュリティ自動化の強力なエントリポイントですが、ビルドや自動ツールも攻撃対象領域の一部となります。侵害されたパイプライン、漏洩したトークン、汚染された依存関係は、現在、最も被害をもたらす攻撃ベクトルの一つです。SolarWinds, Codecov, XZ Utils のインシデントはすべて、ビルドやサプライチェーンが悪用されることで、製品に大規模な影響を及ぼす可能性があることを示しています。そのため、このガイドラインは、アプリケーションの保護と並んで、**パイプラインの保護** を最優先事項として扱います。
 
-## How to use this guideline
+## このガイドラインの使い方
 
-Different audiences will find different entry points most useful:
+読者はさまざまであり、適切なエントリポイントが異なります。
 
-**If you are a developer or engineer:**
-Start with the [Develop](../2-Process/2-2-Develop) stage, specifically pre-commit hooks and secrets management — the controls you can implement in your own workflow today. Then read the [Build](../2-Process/2-3-Build) stage for what your CI pipeline should enforce. Use the [Threat Modeling](../2-Process/2-1-Design/2-1-1-Threat-modeling.md) page when you are designing a new feature or service.
+**開発者やエンジニアの場合:**
+[開発 (Develop)](../2-Process/2-2-Develop) ステージ、特に pre-commit フックやシークレット管理から始めます。自身のワークフローに今すぐ導入できる対策です。それから [ビルド (Build)](../2-Process/2-3-Build) ステージで、CI パイプラインが何を強制すべきかを読みます。新しい機能やサービスを設計する際には、[脅威モデリング (Threat Modeling)](../2-Process/2-1-Design/2-1-1-Threat-modeling.md) ページを使用します。
 
-**If you are a security engineer or AppSec lead:**
-Start with the [Overview](0-2-Overview.md) for a full pipeline view, then use the [Frameworks and Standards](0-3-Frameworks-and-Standards.md) page to map this guideline to your regulatory or maturity framework requirements. Use the [Governance](../3-Governance) section to build a reporting and measurement program.
+**セキュリティエンジニアや AppSec リーダーの場合:**
+[概要 (Overview)](0-2-Overview.md) で、パイプライン全体の眺望から始めます。それから [フレームワークと標準 (Frameworks and Standards)](0-3-Frameworks-and-Standards.md) ページを使用して、このガイドラインを規制要件や成熟度フレームワークの要件とマップします。[ガバナンス (Governance)](../3-Governance) セクションを使用して、報告および測定のプログラムを構築します。
 
-**If you are an engineering manager or CISO:**
-Start with the [Maturity levels](#maturity-levels--where-to-start) table below and the [Tracking Maturities](../3-Governance/3-3-Reporting/3-3-1-Tracking-maturities.md) page. The [People](../1-People) section covers the organizational structures (security champions, roles) that make the program sustainable.
+**エンジニアリングマネージャや CISO の場合:**
+下記の [成熟度レベル](#maturity-levels--where-to-start) の表と [成熟度追跡 (Tracking Maturities)](../3-Governance/3-3-Reporting/3-3-1-Tracking-maturities.md) ページから始めます。[要員 (People)](../1-People) セクションはプログラムを継続可能なものにするための組織体制 (セキュリティチャンピオン、ロール) をカバーします。
 
 ## Common anti-patterns to avoid
 
@@ -71,7 +71,7 @@ Start with the [Maturity levels](#maturity-levels--where-to-start) table below a
 - **Treating compliance as security** — passing an audit is not the same as being secure. Compliance is a floor, not a ceiling; design for real-world adversaries, not just checkbox controls.
 - **Ignoring developer experience** — security tooling that is slow, noisy, or hard to use gets disabled or routed around. Developer experience is a security concern.
 
-## Maturity levels — where to start
+## Maturity levels — where to start <a name="maturity-levels--where-to-start"></a>
 
 | Stage | What to focus on |
 |---|---|
