@@ -63,13 +63,13 @@ CI/CD はセキュリティ自動化の強力なエントリポイントです�
 **エンジニアリングマネージャや CISO の場合:**
 下記の [成熟度レベル](#maturity-levels--where-to-start) の表と [成熟度追跡 (Tracking Maturities)](../3-Governance/3-3-Reporting/3-3-1-Tracking-maturities.md) ページから始めます。[要員 (People)](../1-People) セクションはプログラムを継続可能なものにするための組織体制 (セキュリティチャンピオン、ロール) をカバーします。
 
-## Common anti-patterns to avoid
+## 避けるべきよくあるアンチパターン
 
-- **Security as a gate at the end** — running a pentest or DAST scan as the sole security activity before release does not scale, finds issues too late, and creates a bottleneck. Gates are necessary but not sufficient.
-- **Tool sprawl without process** — buying or deploying many scanners without a clear triage, ownership, and remediation process generates noise and alert fatigue that causes teams to ignore findings entirely.
-- **Centralized security ownership** — a small security team that "owns" security and must review everything becomes a bottleneck and a single point of failure. Shared ownership, supported by tooling and champions, is the goal.
-- **Treating compliance as security** — passing an audit is not the same as being secure. Compliance is a floor, not a ceiling; design for real-world adversaries, not just checkbox controls.
-- **Ignoring developer experience** — security tooling that is slow, noisy, or hard to use gets disabled or routed around. Developer experience is a security concern.
+- **最後のゲートとしてのセキュリティ** — リリース前に単独のセキュリティアクティビティとしてペンテストや DAST スキャンを実行することは、スケールせず、問題発見が遅すぎ、ボトルネックを生み出します。ゲートは必要ですが、十分ではありません。
+- **プロセスなしでのツール乱立** — 明確なトリアージ、オーナーシップ、修正プロセスなしで多くのスキャナを購入ないし導入すると、ノイズやアラート疲れを生じ、チームが検出結果全体を無視することにつながります。
+- **セキュリティオーナーシップの集中化** — セキュリティに「責任を負い」、すべてをレビューしなければならない小さなセキュリティチームはボトルネックや単一障害点になります。オーナーシップを共有し、ツール化やチャンピオンがサポートすることを目指します。
+- **コンプライアンスをセキュリティとして同一視** — 監査に合格することは、安全であることと同じではありません。コンプライアンスは基準であり、到達点ではありません。単にチェックボックスを満たすだけでなく、実際の敵対者に対して設計を行います。
+- **開発者エクスペリエンスの無視** — 遅い、ノイズが多い、あるいは使いづらいセキュリティツールは無効化されたり、迂回されます。開発者エクスペリエンスはセキュリティ上の重要な課題です。
 
 ## Maturity levels — where to start <a name="maturity-levels--where-to-start"></a>
 
