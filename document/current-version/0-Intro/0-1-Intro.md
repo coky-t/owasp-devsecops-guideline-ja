@@ -71,14 +71,14 @@ CI/CD はセキュリティ自動化の強力なエントリポイントです�
 - **コンプライアンスをセキュリティとして同一視** — 監査に合格することは、安全であることと同じではありません。コンプライアンスは基準であり、到達点ではありません。単にチェックボックスを満たすだけでなく、実際の敵対者に対して設計を行います。
 - **開発者エクスペリエンスの無視** — 遅い、ノイズが多い、あるいは使いづらいセキュリティツールは無効化されたり、迂回されます。開発者エクスペリエンスはセキュリティ上の重要な課題です。
 
-## Maturity levels — where to start <a name="maturity-levels--where-to-start"></a>
+## 成熟度レベル — どこから始めるか <a name="maturity-levels--where-to-start"></a>
 
-| Stage | What to focus on |
+| ステージ | 焦点を当てるもの |
 |---|---|
-| Starting out | Secrets scanning in CI, SCA for known CVEs, basic branch protection, OWASP Top 10 awareness training |
-| Developing | SAST in pull requests, IaC scanning, security gates on high/critical findings, security champions program |
-| Maturing | Container hardening, SBOM generation, threat modeling, DAST, vulnerability management SLAs |
-| Advanced | Supply-chain signing and provenance (SLSA), ASPM, BAS, runtime detection-as-code, AI/ML security |
+| 初期段階 | CI でのシークレットスキャン、既存 CVE に対する SCA、基本ブランチ保護、OWASP Top 10 意識向上トレーニング |
+| 開発段階 | プルリクエストでの SAST、IaC スキャン、高/重大の検出結果でのセキュリティゲート、セキュリティチャンピオンプログラム |
+| 成熟段階 | コンテナ堅牢化、SBOM 生成、脅威モデリング、DAST、脆弱性管理 SLA |
+| 高度段階 | サプライチェーンの署名と来歴 (SLSA)、ASPM、BAS、ランタイム Detection-as-Code、AI/ML セキュリティ |
 
 ## Where to start
 
