@@ -80,11 +80,11 @@ CI/CD はセキュリティ自動化の強力なエントリポイントです�
 | 成熟段階 | コンテナ堅牢化、SBOM 生成、脅威モデリング、DAST、脆弱性管理 SLA |
 | 高度段階 | サプライチェーンの署名と来歴 (SLSA)、ASPM、BAS、ランタイム Detection-as-Code、AI/ML セキュリティ |
 
-## Where to start
+## どこから始めるか
 
-- [OWASP Proactive Controls](https://owasp.org/www-project-proactive-controls/) lists the top security controls every developer should implement while coding.
-- [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org/model/) helps you decide what to prioritize according to your maturity level.
-- The [Frameworks and Standards](0-3-Frameworks-and-Standards.md) page maps how SSDF, SAMM, DSOMM, and SLSA fit together with this guideline.
-- The [Overview](0-2-Overview.md) page lists a recommended progression of controls to introduce into a pipeline.
+- [OWASP Proactive Controls](https://owasp.org/www-project-proactive-controls/) は、すべての開発者がコーディング時に実装すべき主要なセキュリティコントロールを挙げています。
+- [OWASP Software Assurance Maturity Model (SAMM)](https://owaspsamm.org/model/) は、成熟度レベルに応じて優先するものを判断するのに役立ちます。
+- [フレームワークと標準 (Frameworks and Standards)](0-3-Frameworks-and-Standards.md) ページは、SSDF, SAMM, DSOMM, SLSA がこのガイドラインとどのように調和するかを対応付けています。
+- [概要 (Overview)](0-2-Overview.md) ページは、パイプラインに導入するコントロールの推奨順序を挙げています。
 
-If you need earlier editions, see the [old-versions](../../old-versions/) directory.
+以前の版が必要な場合、[old-versions](../../old-versions/) ディレクトリを参照してください。
