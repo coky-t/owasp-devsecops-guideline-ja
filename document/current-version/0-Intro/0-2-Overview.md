@@ -1,12 +1,12 @@
-# Overview
+# 概要 (Overview)
 
-## From DevOps to DevSecOps
+## DevOps から DevSecOps へ
 
-DevOps unified development and operations to deliver software faster and more reliably through automation, continuous integration, and continuous delivery. **DevSecOps** extends that model by making security a shared responsibility integrated into every phase, rather than a separate audit performed at the end.
+DevOps は、自動化、継続的インテグレーション、継続的デリバリを通じて、開発と運用を統合し、より迅速かつより信頼できるソフトウェアを届けます。**DevSecOps** は、セキュリティを最後に実施する別個の監査ではなく、すべてのフェーズに統合された共有責任とすることで、このモデルを広げます。
 
-The driving idea is **shift-left**: move security feedback as close as possible to the moment code is written, when issues are cheapest to fix. In practice, mature programs now **shift everywhere** — running fast, low-friction checks early *and* deeper validation continuously through build, test, deploy, and runtime.
+基にある考え方は **シフトレフト** です。これは、問題を修正することが最も安くなる、つまりコードが記述される時点に可能な限り近くにセキュリティフィードバックを行うものです。実際には、成熟したプログラムでは現在 **シフトエブリウェア** となっています。迅速かつ低負荷なチェックを実行する *と同時に* ビルド、テスト、デプロイ、ランタイムに至るまで継続的により深いバリデーションを行います。
 
-The difference is not just where security happens, but *who owns it*: DevSecOps moves security ownership from a separate team to the whole engineering organization, supported by automation, tooling, and a champions network.
+その違いは、単にセキュリティをどこで行うかだけでなく、*誰がそれを担うか* があります。DevSecOps は、自動化、ツール化、チャンピオンネットワークによって支援を受ける、セキュリティオーナーシップを個別のチームからエンジニアリング組織全体へ移行します。
 
 ## What to add to a pipeline
 
