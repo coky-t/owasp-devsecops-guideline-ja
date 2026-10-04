@@ -10,9 +10,9 @@ DevSecOps とは DevOps *内に* セキュリティを組み込むことです�
 
 ## なぜ DevSecOps なのか — 遅れによるコスト
 
-脆弱性が早期に発見されるほど、その修正を安価に抑えられます。IBM の Systems Science Institute の調査によると、設計段階で発見された欠陥の修正コストは、実装段階で発見されたものと比べておよそ 6 分の 1 になり、本番環境で発見されたものと比べておよそ 100 分の 1 になることを、一貫して示しています。これらの比率は厳密ではなく、欠陥の種類やシステムによって異なりますが、発見が遅れるほど費用が増大する、というのが業界全体にわたる方向性を示す事実です。
+The earlier a vulnerability is found, the cheaper it is to fix. Widely quoted figures (often attributed to an "IBM Systems Science Institute" study, whose original source cannot be verified) claim a defect costs roughly 6× more to fix in implementation and up to 100× more in production than in design. Treat those exact ratios with caution: the better-documented work by Boehm and Basili (2001) found that fixing a problem after delivery is often about 100× more expensive on large projects, but closer to 5:1 on small, non-critical ones. The ratio depends on the defect type and the system, but the directional truth holds across the industry: late discovery is expensive.
 
-しかし、数字だけでは捕捉できないより深刻なコストがもうひとつあります。本番環境で脆弱性が *悪用される* と、修復コストを負担するだけでなく、侵害によるコスト、規制当局からの制裁、評判の低下、顧客への被害、経営陣の説明責任という負担もあります。2020 年の SolarWinds サプライチェーン攻撃、2021 年に数百万のシステムに影響を及ぼした Log4Shell 情報漏洩、2019 年の Capital One 侵害 (WAF/SSRF の設定ミスによる) はすべてが共通の脅威を共有しています。セキュリティがデリバリ全体を通して継続的に考慮されていないために、悪用経路が存在していたということです。
+しかし、数字だけでは捕捉できないより深刻なコストがもうひとつあります。本番環境で脆弱性が *悪用される* と、修復コストを負担するだけでなく、侵害によるコスト、規制当局からの制裁、評判の低下、顧客への被害、経営陣の説明責任という負担もあります。2020 年の SolarWinds サプライチェーン攻撃、2021 年に数百万のシステムに影響を及ぼした Log4Shell 情報漏洩、2019 年の Capital One 侵害 (WAF の設定ミスでの SSRF 不備による) はすべてが共通の脅威を共有しています。セキュリティがデリバリ全体を通して継続的に考慮されていないために、悪用経路が存在していたということです。
 
 リリースの数週前のペネトレーションテストや、リクエストを受けてコードをレビューするセキュリティチームといった、従来のセキュリティは一日に幾度も出荷するチームには追従できません。DevSecOps は、自動化可能なものを自動化し、セキュリティに関するフィードバックを即座に得られるとともに、リスクに関する判断が適切なレベルでできるように共有されたオーナーシップを築くことで、これを解決します。
 
@@ -48,7 +48,7 @@ DevSecOps とは DevOps *内に* セキュリティを組み込むことです�
 
 ## パイプライン自体の注意点
 
-CI/CD はセキュリティ自動化の強力なエントリポイントですが、ビルドや自動ツールも攻撃対象領域の一部となります。侵害されたパイプライン、漏洩したトークン、汚染された依存関係は、現在、最も被害をもたらす攻撃ベクトルの一つです。SolarWinds, Codecov, XZ Utils のインシデントはすべて、ビルドやサプライチェーンが悪用されることで、製品に大規模な影響を及ぼす可能性があることを示しています。そのため、このガイドラインは、アプリケーションの保護と並んで、**パイプラインの保護** を最優先事項として扱います。
+CI/CD はセキュリティ自動化の強力なエントリポイントですが、ビルドや自動ツールも攻撃対象領域の一部となります。侵害されたパイプライン、漏洩したトークン、汚染された依存関係は、現在、最も被害をもたらす攻撃ベクトルの一つです。SolarWinds, Codecov, XZ Utils, `tj-actions/changed-files` (2025), Trivy GitHub Actions (2026) のインシデントはすべて、ビルドやサプライチェーンが悪用されることで、大規模に、製品に影響を及ぼし、CI シークレットが盗まれる可能性があることを示しています。そのため、このガイドラインは、アプリケーションの保護と並んで、**パイプラインの保護** を最優先事項として扱います。
 
 ## このガイドラインの使い方
 
@@ -61,7 +61,7 @@ CI/CD はセキュリティ自動化の強力なエントリポイントです�
 [概要 (Overview)](0-2-Overview.md) で、パイプライン全体の眺望から始めます。それから [フレームワークと標準 (Frameworks and Standards)](0-3-Frameworks-and-Standards.md) ページを使用して、このガイドラインを規制要件や成熟度フレームワークの要件とマップします。[ガバナンス (Governance)](../3-Governance) セクションを使用して、報告および測定のプログラムを構築します。
 
 **エンジニアリングマネージャや CISO の場合:**
-下記の [成熟度レベル](#maturity-levels--where-to-start) の表と [成熟度追跡 (Tracking Maturities)](../3-Governance/3-3-Reporting/3-3-1-Tracking-maturities.md) ページから始めます。[要員 (People)](../1-People) セクションはプログラムを継続可能なものにするための組織体制 (セキュリティチャンピオン、ロール) をカバーします。
+下記の [成熟度レベル](#maturity-levels-where-to-start) の表と [成熟度追跡 (Tracking Maturities)](../3-Governance/3-3-Reporting/3-3-1-Tracking-maturities.md) ページから始めます。[要員 (People)](../1-People) セクションはプログラムを継続可能なものにするための組織体制 (セキュリティチャンピオン、ロール) をカバーします。
 
 ## 避けるべきよくあるアンチパターン
 
@@ -71,7 +71,7 @@ CI/CD はセキュリティ自動化の強力なエントリポイントです�
 - **コンプライアンスをセキュリティとして同一視** — 監査に合格することは、安全であることと同じではありません。コンプライアンスは基準であり、到達点ではありません。単にチェックボックスを満たすだけでなく、実際の敵対者に対して設計を行います。
 - **開発者エクスペリエンスの無視** — 遅い、ノイズが多い、あるいは使いづらいセキュリティツールは無効化されたり、迂回されます。開発者エクスペリエンスはセキュリティ上の重要な課題です。
 
-## 成熟度レベル — どこから始めるか <a name="maturity-levels--where-to-start"></a>
+## 成熟度レベル: どこから始めるか <a name="maturity-levels-where-to-start"></a>
 
 | ステージ | 焦点を当てるもの |
 |---|---|
