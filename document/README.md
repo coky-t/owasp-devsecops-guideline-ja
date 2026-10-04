@@ -6,6 +6,16 @@ OWASP DevSecOps ガイドラインはどのようにしてセキュアなパイ�
 
 理想とする目標は **"(設計やアプリケーションの脆弱性による) セキュリティ問題をできるだけ早く検出すること"** です。
 
+## How the guideline is organized
+
+The guideline is built around three pillars:
+
+- **People** — teams, roles, culture, and training.
+- **Process** — security activities woven into every SDLC stage: Design, Develop, Build, Test, Release, Deploy, Operate.
+- **Governance** — compliance, policy as code, reporting, ASPM, and AI governance.
+
+The current edition is refreshed for 2025/2026 and aligned with frameworks such as NIST SSDF, OWASP SAMM, OWASP DSOMM, and SLSA. See the [Table of Contents](#table-of-contents) below, or browse the [current version](current-version/README.md).
+
 ## 最初のステップ
 
 DevSecOps とは DevOps にセキュリティを取り込むことです。しかし CI/CD のペースに追いつくためにはソフトウェア作成やテストの初期段階でセキュリティを注入する必要があります。
@@ -32,7 +42,9 @@ DevSecOps とは DevOps にセキュリティを取り込むことです。し�
 - CNAPP (クラウドネイティブアプリケーション保護)
 - インフラストラクチャスキャン
 - 他のツールからの継続的なスキャン
-- コンプライアンスチェック
+- コンプライアンスチェックと Policy as Code
+- Security gates (quality gates that block risky builds and releases)
+- Centralized reporting and ASPM (Application Security Posture Management)
 - AI/LLM セキュリティおよび AI ガバナンス (AI 支援開発と AI 搭載機能のセキュリティ保護)
 
 ソフトウェア開発ライフサイクル (SDLC) やソフトウェアアーキテクチャにしたがってパイプラインのステップをカスタマイズし、始めていれば段階的に自動化を追加することができます。
@@ -49,10 +61,12 @@ CI/CD は SecOps にとって有利であり、セキュリティ対策やコン
   - [0-1-序文 (Intro)](current-version/0-Intro/0-1-Intro.md)
   - [0-2-概要 (Overview)](current-version/0-Intro/0-2-Overview.md)
   - [0-3-フレームワークと標準 (Frameworks-and-Standards)](current-version/0-Intro/0-3-Frameworks-and-Standards.md)
+  - [0-4-Regulatory-Mapping-CRA-NIS2-SSDF](current-version/0-Intro/0-4-Regulatory-Mapping-CRA-NIS2-SSDF.md)
 - [1-要員 (People)](current-version/1-People)
   - [1-1-チーム形成 (Shape-the-team)](current-version/1-People/1-1-Shape-the-team)
     - [1-1-1-セキュリティチャンピオン (Security-champions)](current-version/1-People/1-1-Shape-the-team/1-1-1-Security-champions.md)
     - [1-1-2-役割と責任 (Roles-and-Responsibilities)](current-version/1-People/1-1-Shape-the-team/1-1-2-Roles-and-Responsibilities.md)
+    - [1-1-3-Security-champions-playbook-templates](current-version/1-People/1-1-Shape-the-team/1-1-3-Security-champions-playbook-templates.md)
   - [1-2-トレーニング (Training)](current-version/1-People/1-2-Training)
     - [1-2-1-セキュアコーディング (Secure-coding)](current-version/1-People/1-2-Training/1-2-1-Secure-coding.md)
     - [1-2-2-セキュリティ CI/CD (Security-CICD)](current-version/1-People/1-2-Training/1-2-2-Security-CICD.md)
@@ -68,11 +82,15 @@ CI/CD は SecOps にとって有利であり、セキュリティ対策やコン
       - [2-2-1-3-コードのリンティング (Linting-code)](current-version/2-Process/2-2-Develop/2-2-1-Pre-commit/2-2-1-3-Linting-code.md)
       - [2-2-1-4-リポジトリ堅牢化 (Repository-Hardening)](current-version/2-Process/2-2-Develop/2-2-1-Pre-commit/2-2-1-4-Repository-Hardening.md)
     - [2-2-2-IDE と AI 支援開発 (IDE-and-AI-assisted-development)](current-version/2-Process/2-2-Develop/2-2-2-IDE-and-AI-assisted-development.md)
+    - [2-2-3-Secure-Code-Review](current-version/2-Process/2-2-Develop/2-2-3-Secure-Code-Review.md)
+    - [2-2-4-Developer-Workstation-and-Dev-Container-Security](current-version/2-Process/2-2-Develop/2-2-4-Developer-Workstation-and-Dev-Container-Security.md)
+    - [2-2-5-AI-Agent-and-MCP-Security](current-version/2-Process/2-2-Develop/2-2-5-AI-Agent-and-MCP-Security.md)
   - [2-3-ビルド (Build)](current-version/2-Process/2-3-Build)
     - [2-3-1-静的解析 (Static-Analysis)](current-version/2-Process/2-3-Build/2-3-1-Static-Analysis)
       - [2-3-1-1-静的アプリケーションセキュリティテスト (Static-Application-Security-Testing)](current-version/2-Process/2-3-Build/2-3-1-Static-Analysis/2-3-1-1-Static-Application-Security-Testing.md)
     - [2-3-2-ソフトウェアコンポジション解析 (Software-Composition-Analysis)](current-version/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis)
       - [2-3-2-1-ソフトウェアコンポジション解析 (Software-Composition-Analysis)](current-version/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-1-Software-Composition-Analysis.md)
+      - [2-3-2-2-Dependency-Management-and-Cooldown-Policies](current-version/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-2-Dependency-Management-and-Cooldown-Policies.md)
     - [2-3-3-コンテナセキュリティ (Container-Security)](current-version/2-Process/2-3-Build/2-3-3-Container-Security)
       - [2-3-3-1-コンテナスキャン (Container-Scanning)](current-version/2-Process/2-3-Build/2-3-3-Container-Security/2-3-3-1-Container-Scanning.md)
       - [2-3-3-2-コンテナ堅牢化 (Container-Hardening)](current-version/2-Process/2-3-Build/2-3-3-Container-Security/2-3-3-2-Container-Hardening.md)
@@ -89,10 +107,12 @@ CI/CD は SecOps にとって有利であり、セキュリティ対策やコン
     - [2-4-3-モバイルアプリケーションセキュリティテスト (Mobile-Application-Security-Test)](current-version/2-Process/2-4-Test/2-4-3-Mobile-Application-Security-Test.md)
     - [2-4-4-API セキュリティ (API-Security)](current-version/2-Process/2-4-Test/2-4-4-API-Security.md)
     - [2-4-5-構成ミスチェック (Misconfiguration-Check)](current-version/2-Process/2-4-Test/2-4-5-Misconfiguration-Check.md)
+    - [2-4-6-AI-LLM-Application-Security-Testing](current-version/2-Process/2-4-Test/2-4-6-AI-LLM-Application-Security-Testing.md)
   - [2-5-リリース (Release)](current-version/2-Process/2-5-Release)
     - [2-5-1-リリース (Release)](current-version/2-Process/2-5-Release/2-5-1-Release.md)
   - [2-6-デプロイ (Deploy)](current-version/2-Process/2-6-Deploy)
     - [2-6-1-デプロイ (Deploy)](current-version/2-Process/2-6-Deploy/2-6-1-Deploy.md)
+    - [2-6-2-Secrets-in-Kubernetes-and-GitOps](current-version/2-Process/2-6-Deploy/2-6-2-Secrets-in-Kubernetes-and-GitOps.md)
   - [2-7-運用 (Operate)](current-version/2-Process/2-7-Operate)
     - [2-7-1-クラウドネイティブセキュリティ (Cloud-Native-Security)](current-version/2-Process/2-7-Operate/2-7-1-Cloud-Native-Security.md)
     - [2-7-2-ログ記録と監視 (Logging-and-Monitoring)](current-version/2-Process/2-7-Operate/2-7-2-Logging-and-Monitoring.md)
@@ -100,6 +120,10 @@ CI/CD は SecOps にとって有利であり、セキュリティ対策やコン
     - [2-7-4-脆弱性管理 (Vulnerability-Management)](current-version/2-Process/2-7-Operate/2-7-4-Vulnerability-Management.md)
     - [2-7-5-VDP とバグバウンティ (VDP-and-Bug-bounty)](current-version/2-Process/2-7-Operate/2-7-5-VDP-and-Bug-bounty.md)
     - [2-7-6-侵害と攻撃のシミュレーション (Breach-and-attack-simulation)](current-version/2-Process/2-7-Operate/2-7-6-Breach-and-attack-simulation.md)
+    - [2-7-7-Kubernetes-Runtime-Policy-Enforcement](current-version/2-Process/2-7-Operate/2-7-7-Kubernetes-Runtime-Policy-Enforcement.md)
+    - [2-7-8-WAF-WAAP-and-RASP](current-version/2-Process/2-7-Operate/2-7-8-WAF-WAAP-and-RASP.md)
+    - [2-7-9-Serverless-and-PaaS-Runtime-Security](current-version/2-Process/2-7-Operate/2-7-9-Serverless-and-PaaS-Runtime-Security.md)
+    - [2-7-10-Incident-Response-and-Detection-Engineering](current-version/2-Process/2-7-Operate/2-7-10-Incident-Response-and-Detection-Engineering.md)
 - [3-ガバナンス (Governance)](current-version/3-Governance)
   - [3-1-コンプライアンス監査 (Compliance-Auditing)](current-version/3-Governance/3-1-Compliance-Auditing)
     - [3-1-1-コンプライアンス監査 (Compliance-Auditing)](current-version/3-Governance/3-1-Compliance-Auditing/3-1-1-Compliance-Auditing.md)
@@ -110,8 +134,33 @@ CI/CD は SecOps にとって有利であり、セキュリティ対策やコン
     - [3-3-1-成熟度追跡 (Tracking-maturities)](current-version/3-Governance/3-3-Reporting/3-3-1-Tracking-maturities.md)
     - [3-3-2-脆弱性一元管理ダッシュボード (Central-vulnerability-management-dashboard)](current-version/3-Governance/3-3-Reporting/3-3-2-Central-vulnerability-management-dashboard.md)
     - [3-3-3-ASPM (ASPM)](current-version/3-Governance/3-3-Reporting/3-3-3-ASPM.md)
+    - [3-3-4-Exposure-Management-CTEM](current-version/3-Governance/3-3-Reporting/3-3-4-Exposure-Management-CTEM.md)
   - [3-4-AI ガバナンスとリスク (AI-Governance-and-Risk)](current-version/3-Governance/3-4-AI-Governance-and-Risk.md)
 
 ---
+
+## Contributing
+
+Contributions are welcome: fix a typo, add a tool, or propose a new topic by opening an issue or pull request. Please keep tool lists vendor-neutral and alphabetically ordered, and update the Table of Contents when adding or renaming files (see [doc-utilities](doc-utilities/README.md) for the TOC generator).
+
+### Running the checks locally
+
+CI runs [pre-commit](https://pre-commit.com/) (Markdown lint, trailing whitespace, end-of-file newline, YAML/JSON validity) on every pull request. Running the same hooks locally before you push avoids a red CI run:
+
+```bash
+python3.13 -m pip install pre-commit
+pre-commit install          # run the hooks automatically on every commit
+pre-commit run --all-files  # or run them once across the whole repository
+```
+
+On pull requests CI only checks the files you changed; pushes to `master` check the whole repository.
+
+## Previous versions
+
+Earlier editions are kept in [old-versions](old-versions/) (V0.1, V0.2, V0.3).
+
+## License
+
+This project is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE.md).
 
 OWASP ウェブサイトのプロジェクトページは [OWASP DevSecOps Guideline Project](https://owasp.org/www-project-devsecops-guideline/) にあります
