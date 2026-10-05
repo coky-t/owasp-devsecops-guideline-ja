@@ -139,9 +139,9 @@ CI/CD は SecOps にとって有利であり、セキュリティ対策やコン
 
 ---
 
-## Contributing
+## 貢献
 
-Contributions are welcome: fix a typo, add a tool, or propose a new topic by opening an issue or pull request. Please keep tool lists vendor-neutral and alphabetically ordered, and update the Table of Contents when adding or renaming files (see [doc-utilities](doc-utilities/README.md) for the TOC generator).
+貢献を歓迎します。誤記の修正、ツールの追加、あるいは新しいトピックの提案などを issue やプルリクエストを開いてください。ツールリストはベンダー中立とし、アルファベット順にしてください。また、ファイルの追加や名前変更を行う際には、目次を更新してください (目次生成器については [doc-utilities](https://github.com/OWASP/DevSecOpsGuideline/blob/master/doc-utilities/README.md) を参照してください)。
 
 ### Running the checks locally
 
