@@ -10,7 +10,7 @@ DevSecOps とは DevOps *内に* セキュリティを組み込むことです�
 
 ## なぜ DevSecOps なのか — 遅れによるコスト
 
-The earlier a vulnerability is found, the cheaper it is to fix. Widely quoted figures (often attributed to an "IBM Systems Science Institute" study, whose original source cannot be verified) claim a defect costs roughly 6× more to fix in implementation and up to 100× more in production than in design. Treat those exact ratios with caution: the better-documented work by Boehm and Basili (2001) found that fixing a problem after delivery is often about 100× more expensive on large projects, but closer to 5:1 on small, non-critical ones. The ratio depends on the defect type and the system, but the directional truth holds across the industry: late discovery is expensive.
+脆弱性が早期に発見されるほど、その修正を安価に抑えられます。広く引用されている数値 (多くの場合 "IBM Systems Science Institute" の調査によるものとされていますが、そのオリジナルソースは確認できていません) では、欠陥の修正コストは、設計時と比較して、実装時にはおよそ 6 倍、本番稼働時には 100 倍に達するといいます。こうした倍率の正確さの扱いには注意が必要です。Boehm と Basili (2001) による、より詳細な研究では、デリバリ後に問題を修正する場合、大規模プロジェクトでは 100 倍以上になることもありますが、小規模で重要ではないものでは5倍程度にとどまることが分かっています。倍率は欠陥の種類やシステムによって異なりますが、発見が遅れるほど費用がかかる、ということが業界全体にわたる方向性としての事実になります。
 
 しかし、数字だけでは捕捉できないより深刻なコストがもうひとつあります。本番環境で脆弱性が *悪用される* と、修復コストを負担するだけでなく、侵害によるコスト、規制当局からの制裁、評判の低下、顧客への被害、経営陣の説明責任という負担もあります。2020 年の SolarWinds サプライチェーン攻撃、2021 年に数百万のシステムに影響を及ぼした Log4Shell 情報漏洩、2019 年の Capital One 侵害 (WAF の設定ミスでの SSRF 不備による) はすべてが共通の脅威を共有しています。セキュリティがデリバリ全体を通して継続的に考慮されていないために、悪用経路が存在していたということです。
 
