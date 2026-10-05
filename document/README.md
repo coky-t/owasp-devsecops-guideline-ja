@@ -90,7 +90,7 @@ CI/CD は SecOps にとって有利であり、セキュリティ対策やコン
       - [2-3-1-1-静的アプリケーションセキュリティテスト (Static-Application-Security-Testing)](current-version/2-Process/2-3-Build/2-3-1-Static-Analysis/2-3-1-1-Static-Application-Security-Testing.md)
     - [2-3-2-ソフトウェアコンポジション解析 (Software-Composition-Analysis)](current-version/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis)
       - [2-3-2-1-ソフトウェアコンポジション解析 (Software-Composition-Analysis)](current-version/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-1-Software-Composition-Analysis.md)
-      - [2-3-2-2-Dependency-Management-and-Cooldown-Policies](current-version/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-2-Dependency-Management-and-Cooldown-Policies.md)
+      - [2-3-2-2-依存関係管理とクールダウンポリシー (Dependency-Management-and-Cooldown-Policies)](current-version/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-2-Dependency-Management-and-Cooldown-Policies.md)
     - [2-3-3-コンテナセキュリティ (Container-Security)](current-version/2-Process/2-3-Build/2-3-3-Container-Security)
       - [2-3-3-1-コンテナスキャン (Container-Scanning)](current-version/2-Process/2-3-Build/2-3-3-Container-Security/2-3-3-1-Container-Scanning.md)
       - [2-3-3-2-コンテナ堅牢化 (Container-Hardening)](current-version/2-Process/2-3-Build/2-3-3-Container-Security/2-3-3-2-Container-Hardening.md)
