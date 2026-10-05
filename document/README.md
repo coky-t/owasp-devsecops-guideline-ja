@@ -159,8 +159,8 @@ pre-commit run --all-files  # or run them once across the whole repository
 
 以前の版は [old-versions](old-versions/) にあります (V0.1, V0.2, V0.3)。
 
-## License
+## ライセンス
 
-This project is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE.md).
+このプロジェクトは [Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE.md) の下でライセンスされています。
 
 OWASP ウェブサイトのプロジェクトページは [OWASP DevSecOps Guideline Project](https://owasp.org/www-project-devsecops-guideline/) にあります
