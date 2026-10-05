@@ -155,9 +155,9 @@ pre-commit run --all-files  # or run them once across the whole repository
 
 プルリクエストでは CI は変更されたファイルのみをチェックしますが、`master` へのプッシュではリポジトリ全体をチェックします。
 
-## Previous versions
+## 以前のバージョン
 
-Earlier editions are kept in [old-versions](old-versions/) (V0.1, V0.2, V0.3).
+以前の版は [old-versions](old-versions/) にあります (V0.1, V0.2, V0.3)。
 
 ## License
 
