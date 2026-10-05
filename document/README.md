@@ -43,8 +43,8 @@ DevSecOps とは DevOps にセキュリティを取り込むことです。し�
 - インフラストラクチャスキャン
 - 他のツールからの継続的なスキャン
 - コンプライアンスチェックと Policy as Code
-- Security gates (quality gates that block risky builds and releases)
-- Centralized reporting and ASPM (Application Security Posture Management)
+- セキュリティゲート (リスクのあるビルドやリリースをブロックする品質ゲート)
+- 一元化されたレポーティングと ASPM (Application Security Posture Management)
 - AI/LLM セキュリティおよび AI ガバナンス (AI 支援開発と AI 搭載機能のセキュリティ保護)
 
 ソフトウェア開発ライフサイクル (SDLC) やソフトウェアアーキテクチャにしたがってパイプラインのステップをカスタマイズし、始めていれば段階的に自動化を追加することができます。
