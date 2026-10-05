@@ -143,9 +143,9 @@ CI/CD は SecOps にとって有利であり、セキュリティ対策やコン
 
 貢献を歓迎します。誤記の修正、ツールの追加、あるいは新しいトピックの提案などを issue やプルリクエストを開いてください。ツールリストはベンダー中立とし、アルファベット順にしてください。また、ファイルの追加や名前変更を行う際には、目次を更新してください (目次生成器については [doc-utilities](https://github.com/OWASP/DevSecOpsGuideline/blob/master/doc-utilities/README.md) を参照してください)。
 
-### Running the checks locally
+### ローカルでのチェックの実行
 
-CI runs [pre-commit](https://pre-commit.com/) (Markdown lint, trailing whitespace, end-of-file newline, YAML/JSON validity) on every pull request. Running the same hooks locally before you push avoids a red CI run:
+CI はすべてのプルリクエストで [pre-commit](https://pre-commit.com/) (マークダウンのリント、行末の空白、ファイル末尾の改行、YAML/JSON 妥当性) を実行します。プッシュ前にローカルで同じフックを実行すれば、CI エラー (赤色表示) を防ぎます。
 
 ```bash
 python3.13 -m pip install pre-commit
@@ -153,7 +153,7 @@ pre-commit install          # run the hooks automatically on every commit
 pre-commit run --all-files  # or run them once across the whole repository
 ```
 
-On pull requests CI only checks the files you changed; pushes to `master` check the whole repository.
+プルリクエストでは CI は変更されたファイルのみをチェックしますが、`master` へのプッシュではリポジトリ全体をチェックします。
 
 ## Previous versions
 
