@@ -6,15 +6,15 @@ OWASP DevSecOps ガイドラインはどのようにしてセキュアなパイ�
 
 理想とする目標は **"(設計やアプリケーションの脆弱性による) セキュリティ問題をできるだけ早く検出すること"** です。
 
-## How the guideline is organized
+## ガイドラインの構成方法
 
-The guideline is built around three pillars:
+このガイドラインは三つの柱を中心に構成されています。
 
-- **People** — teams, roles, culture, and training.
-- **Process** — security activities woven into every SDLC stage: Design, Develop, Build, Test, Release, Deploy, Operate.
-- **Governance** — compliance, policy as code, reporting, ASPM, and AI governance.
+- **要員 (People)** — チーム、役割、文化、トレーニング。
+- **プロセス (Process)** — すべての SDLC ステージ (**設計 (Design)**、**開発 (Develop)**、**ビルド (Build)**、**テスト (Test)**、**リリース (Release)**、**デプロイ (Deploy)**、**運用 (Operate)**) に編み込まれたセキュリティ活動。
+- **ガバナンス (Governance)** — コンプライアンス、Policy as Code、報告、ASPM、AI ガバナンス。
 
-The current edition is refreshed for 2025/2026 and aligned with frameworks such as NIST SSDF, OWASP SAMM, OWASP DSOMM, and SLSA. See the [Table of Contents](#table-of-contents) below, or browse the [current version](current-version/README.md).
+最新版は 2025/2026 年向けに改訂されており、NIST SSDF, OWASP SAMM, OWASP DSOMM, SLSA などのフレームワークと整合されています。以下の [目次](#table-of-contents) を参照するか、[最新バージョン](current-version/README.md) を閲覧してください。
 
 ## 最初のステップ
 
@@ -55,7 +55,7 @@ CI/CD は SecOps にとって有利であり、セキュリティ対策やコン
 
 ---
 
-## 目次
+## 目次 <a name="table-of-contents"></a>
 
 - [0-概論 (Intro)](current-version/0-Intro)
   - [0-1-序文 (Intro)](current-version/0-Intro/0-1-Intro.md)
