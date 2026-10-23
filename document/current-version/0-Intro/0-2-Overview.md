@@ -16,14 +16,71 @@ DevOps は、自動化、継続的インテグレーション、継続的デリ�
 - **ソフトウェアコンポジション解析 (Software Composition Analysis, SCA)** — 脆弱性のあり、悪意のあるオープンソース依存関係を検出します。SCA ツールは、依存関係ツリーを CVE データベースとマップし、さらに、悪意のあるパッケージ (タイポスクワッティング、依存関係の混乱) やライセンス上の問題をフラグ付けします。Log4Shell (2021 年) は、推移的依存関係で重大な CVE が大規模になり得ることを実証しました。開発者の大半が存在を知ることのないライブラリによって、数億のシステムが影響を受けました。
 - **静的アプリケーションセキュリティテスト (Static Application Security Testing, SAST)** — 欠陥がないか、ファーストパーティのソースコードを解析します。効果的な SAST はプルリクエストで実行し、ベースブランチに対して *新しい* 検出結果のみを報告するため、開発者は自身が持ち込んだもののみ確認します。
 - **IaC スキャン** — Terraform、Helm、Kubernetes マニフェスト、Ansible などの設定不備を探します。過剰に広範な IAM、暗号化されていないストレージ、オープンネットワークルールといったこうした不備は、クラウド環境への最も簡単な経路になることがよくあります。Capital One の侵害 (2019) では、WAF の設定不備と過剰な IAM パーミッションを組み合わせて悪用され、1 億を超えるレコードを窃取しました。
-- **Container security** — scan and harden images and their base layers. Container scanning should run at build time and again continuously against the registry, since new CVEs emerge after an image is published.
-- **Supply-chain security** — generate SBOMs, sign artifacts, and produce build provenance (SLSA). Signed provenance lets you verify that a release artifact was built from the expected source by the expected pipeline, catching tampering before production. The SolarWinds attack (2020) injected malicious code into the build process; signed provenance would have created a verifiable record of the anomaly.
-- **IAST / DAST** — test running applications interactively and dynamically. IAST instruments the application at test time for deep, low-noise findings; DAST probes from the outside, as an attacker would.
+- **コンテナセキュリティ** — イメージおよびそのベースイメージをスキャンして堅牢化します。イメージが公開された後に新たな CVE が現れることがあるため、コンテナスキャンはビルド時に実行するだけでなく、レジストリに対しても継続的に実行すべきです。
+- **サプライチェーンセキュリティ** — SBOM を生成し、アーティファクトに署名し、ビルド来歴を生成します (SLSA)。署名付き来歴は、リリースアーティファクトが意図したソースから意図したパイプラインによってビルドされたことを検証され、本番前に改竄を捕捉します。SolarWinds 攻撃 (2020) ではビルドプロセスに悪意のあるコードが注入されましたが、署名付き来歴であればその異常を検証可能な記録として作成されたでしょう。
+- **IAST / DAST** — 実行中のアプリケーションを対話的かつ動的にテストします。IAST はテスト時にアプリケーションを計装して、詳細かつノイズの少ない結果を得ます。DAST は攻撃者のように外部から探査します。
 - **API security** — discover, test, and protect APIs. REST and GraphQL surfaces are often undertested; dedicated API security tools enumerate endpoints from specs, traffic, or code and fuzz them for the OWASP API Top 10.
 - **CNAPP / cloud-native security** — protect cloud and Kubernetes workloads at runtime. CNAPP platforms (CSPM + CWPP + CIEM + KSPM) give a unified view of misconfigurations, vulnerable workloads, excessive permissions, and runtime threats.
 - **Continuous monitoring and vulnerability management** — aggregate, prioritize, and remediate findings over time. A vulnerability management process with defined SLAs (e.g., critical CVEs within 7 days, high within 30) closes the loop between detection and fix.
 - **Compliance checks** — continuously verify controls against policy and regulation using policy-as-code tools so compliance state is always known, not discovered at audit time.
 - **AI-assisted development guardrails** — apply the same scanning gates to AI-generated code, restrict what coding agents and MCP servers can access, and verify suggested dependencies. See [IDE and AI-Assisted Development Security](../2-Process/2-2-Develop/2-2-2-IDE-and-AI-assisted-development.md).
+
+## The secure pipeline at a glance
+
+The diagram below shows how those controls fit together across an application pipeline and an infrastructure pipeline. Every scanner reports into a central vulnerability management platform, and scanning does not stop at deployment — registries, staging, and production are scanned continuously.
+
+```mermaid
+flowchart LR
+    subgraph APP["Application pipeline"]
+        subgraph APPCI["CI"]
+            A0[(Git<br/>AppCode)] --> A1[Pipeline init] --> A2[Secret<br/>scanning] --> A3[SAST] --> A4[SCA] --> A5[Container<br/>scanning]
+        end
+        subgraph APPCD["CD"]
+            A6[Deploy<br/>staging] --> A7[IAST] --> A8[DAST] -- No vulnerability --> A9[Deploy<br/>prod]
+        end
+        A5 -- "No vulnerability:<br/>push image" --> REG[(Container<br/>registry)] -- Pull image --> A6
+    end
+
+    subgraph INFRA["Infrastructure pipeline"]
+        subgraph INFCI["CI"]
+            I0[(Git<br/>InfraCode)] --> I1[Pipeline init] --> I2[Secret<br/>scanning] --> I3[IaC<br/>scanning]
+        end
+        subgraph INFCD["CD"]
+            I4[Deploy<br/>staging] --> I5[Infra<br/>scanning] -- No vulnerability --> I6[Deploy<br/>prod]
+        end
+        I3 -- No issue --> I4
+    end
+
+    subgraph ENV["Environments"]
+        STG((Staging))
+        PRD((Production))
+        PRD --> RT[Runtime<br/>security]
+        PRD --> CSI[Continuous<br/>infra scanning]
+    end
+
+    CVM[["Central Vulnerability Management"]]
+
+    A6 & I4 --> STG
+    A9 & I6 --> PRD
+    A8 -. Scan staging .-> STG
+    I5 -. Scan infra .-> STG
+
+    APPCI & APPCD & INFCI & INFCD -. Findings .-> CVM
+    REG -. Continuous<br/>image scanning .-> CVM
+    RT & CSI -. Findings .-> CVM
+
+    style CVM fill:#f5f5f5,stroke:#333,stroke-width:2px
+    style REG fill:#fde9d9,stroke:#e8713a
+    style STG fill:#fde9d9,stroke:#e8713a
+    style PRD fill:#fde9d9,stroke:#e8713a
+```
+
+Key takeaways from the picture:
+
+- **Two pipelines, same discipline** — infrastructure code gets secret scanning and IaC scanning just as application code gets SAST and SCA.
+- **Gates between CI and CD** — images and infrastructure only move to staging when the build-time scans pass, and only move to production when the test-time scans (IAST, DAST, infra scanning) pass.
+- **One place for findings** — every tool feeds a [central vulnerability management dashboard](../3-Governance/3-3-Reporting/3-3-2-Central-vulnerability-management-dashboard.md) so risk can be prioritized across sources.
+- **Scanning continues after deploy** — the registry, staging, and production are re-scanned as new CVEs are published, and runtime security watches production for active threats.
 
 ## A recommended introduction order
 
